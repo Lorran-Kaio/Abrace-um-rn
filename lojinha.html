@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lojinha | Abrace um RN</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <app-header></app-header>
+
+    <main class="container-main">
+      <div class="content-center">
+        <div class="introducao">
+          <h1>
+            Todo o dinheiro arrecadado será destinado a ajudar mães e bebês em
+            vulnerabilidade
+          </h1>
+        </div>
+        <div class="search-container">
+          <i class="fas fa-search" id="search-icon"></i>
+          <input
+            type="text"
+            id="search"
+            placeholder="Buscar produtos..."
+            style="display: none"
+          />
+          <!-- Inicialmente escondido -->
+        </div>
+        <div class="floating-icons">
+          <a
+            href="https://abrir.link/bOXtq"
+            target="_blank"
+            class="whatsapp-icon"
+            aria-label="WhatsApp"
+          >
+            <img src="./assets/wpp.svg" alt="WhatsApp" />
+          </a>
+          <a
+            href="https://www.instagram.com/abraceumrn/"
+            target="_blank"
+            class="instagram-icon"
+            aria-label="Instagram"
+          >
+            <img src="./assets/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+        <!-- Produtos -->
+        <a href="https://www.instagram.com/lojinha.abraceumrn/" target="_blank"
+          ><section class="product-section">
+            <div class="product-item" *ngFor="let product of products">
+              <img
+                [src]="product.src"
+                [alt]="product.name"
+                class="product-img"
+              />
+              <div class="product-details">
+                <span class="product-name">{{ product.name }}</span>
+                <span class="product-price"> </span>
+              </div>
+            </div></section
+        ></a>
+      </div>
+    </main>
+
+    <app-footer></app-footer>
+  </body>
+</html>

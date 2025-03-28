@@ -1,0 +1,10 @@
+.container-input {
+    @media (max-width: 768px) {
+        width: 100% !important;
+        overflow-wrap: break-word;
+    }
+}
+
+.botao .rosa-letra-branca {
+    
+}

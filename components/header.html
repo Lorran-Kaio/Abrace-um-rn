@@ -1,0 +1,39 @@
+<header class="app-header">
+  <a href="/home" class="logo">
+    <img src="assets/Logo.png" width="80" height="60" />
+  </a>
+  <div class="spacer"></div>
+  <div class="desktop-nav">
+    <ul class="nav-links desktop-nav-links">
+      <li><a [class.active]="isActive('/home')" href="/home">Home</a></li>
+      <li><a [class.active]="isActive('/galeria')" href="/galeria">Galeria</a></li>
+      <li><a [class.active]="isActive('/lojinha')" href="/lojinha">Lojinha</a></li>
+      <li><a [class.active]="isActive('/voluntarie-se')" href="/voluntarie-se">Voluntarie-se</a></li>
+      <li><a [class.active]="isActive('/sobre')" href="/sobre">Sobre</a></li>
+      <a href="/receber"><app-botao btn-text="Receber" variant="pequeno-rosa"></app-botao></a>
+      <div style="width: 10px;"></div>
+      <a href="/doar-inicial"><app-botao btn-text="Doar" variant="pequeno-azul"></app-botao></a>
+    </ul>
+  </div>
+  <div class="spacer"></div>
+  <div class="nav-toggle" (click)="toggleSidebar()">
+    <span class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </div>
+  <div class="sidebar" [class.show]="isSidebarOpen">
+    <ul class="nav-links sidebar-nav-links">
+      <li><a [class.active]="isActive('/home')" href="/home">Home</a></li>
+      <li><a [class.active]="isActive('/galeria')" href="/galeria">Galeria</a></li>
+      <li><a [class.active]="isActive('/lojinha')" href="/lojinha">Lojinha</a></li>
+      <li><a [class.active]="isActive('/voluntarie-se')" href="/voluntarie-se">Voluntarie-se</a></li>
+      <li><a [class.active]="isActive('/sobre')" href="/sobre">Sobre</a></li>
+    </ul>
+    <div class="sidebar-buttons">
+      <a href="/receber"><app-botao btn-text="Receber" variant="pequeno-rosa"></app-botao></a>
+      <a href="/doar-inicial"><app-botao btn-text="Doar" variant="pequeno-azul"></app-botao></a>
+    </div>
+  </div>
+</header>

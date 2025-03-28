@@ -1,0 +1,152 @@
+/* Estilo para a seção de produtos */
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (min-width: 800px) {
+  .product-section {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Limita a 4 produtos por linha em telas maiores */
+  }
+}
+
+.product-item {
+  background-color: #feebee;
+  width: 200px; /* Aproximadamente 5cm em telas de alta resolução */
+  height: 290px; /* Aproximadamente 8cm em telas de alta resolução */
+  border: 1px solid var(--rosa-escuro);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item img {
+  max-width: 180px;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 10px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.product-name {
+  color: var(--azul-escuro); /* Azul para o nome do produto */
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.product-price {
+  color: #333;
+  margin-top: 15px;
+}
+
+.product-price .currency {
+  color: var(--azul-escuro); /* Azul para "R$" */
+}
+
+.product-price .amount {
+  color: var(--rosa-escuro); /* Rosa para "50,00" */
+}
+
+/* Estilo para a barra de busca */
+.search-container {
+  display: flex; /* Alinha o ícone e o input em linha */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  position: relative; /* Para posicionar o input em relação ao ícone */
+}
+
+#search {
+  width: 0; /* Começa como 0 para ocultar inicialmente */
+  height: 40px; /* Altura */
+  padding: 10px; /* Espaçamento interno */
+  border: 1px solid var(--rosa-escuro); /* Borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  color: #333; /* Cor do texto */
+  background-color: #fff; /* Cor de fundo */
+  transition: width 0.4s ease; /* Animação suave ao expandir */
+  margin-left: 10px; /* Espaçamento à esquerda para separar do ícone */
+}
+
+#search-icon {
+  cursor: pointer; /* Muda o cursor ao passar o mouse sobre o ícone */
+  font-size: 24px; /* Tamanho do ícone */
+  margin-left: 60px;
+  color: var(--rosa-escuro);
+}
+
+#search:focus {
+  border-color: #ff5470; /* Muda a cor da borda ao focar */
+  outline: none; /* Remove o contorno padrão do foco */
+}
+
+/* Mensagem de produto não encontrado */
+#not-found {
+  display: none; /* Começa como escondido */
+  opacity: 0; /* Começa com opacidade 0 */
+  transition: opacity 0.5s ease; /* Transição de opacidade */
+  color: #ff5470; /* Cor da mensagem */
+  text-align: center; /* Centraliza o texto */
+  margin: 20px 0; /* Espaço em cima e embaixo */
+}
+
+.floating-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 5rem;
+}
+
+.floating-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.floating-icons .whatsapp-icon {
+  background-color: #25d366; /* WhatsApp green */
+}
+
+.floating-icons .instagram-icon {
+  background-color: #e1306c; /* Instagram pink */
+}
+
+.floating-icons a img {
+  width: 60%; /* Make the image smaller to fit within the background */
+  height: 60%;
+  object-fit: contain;
+}
+
+.floating-icons a:hover {
+  transform: scale(1.1);
+}
+a {
+  text-decoration: none; 
+  color: #4bb9ba;
+}

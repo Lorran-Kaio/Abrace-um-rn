@@ -1,0 +1,139 @@
+/*o container-main do "sobre" não pode ter esses espaços por causa daquela divisão de cores entre as seções*/
+.container-main {
+  padding: 0 !important;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-center{
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+}
+
+.content-center:not(#introducao-sobre) {
+  flex-direction: row;
+}
+
+.fundo-claro {
+  background-color: var(--azul-claro);
+  color: var(--azul-escuro);
+  width: 100%;
+}
+
+.fundo-escuro {
+  background-color: var(--azul-medio);
+  color: white;
+  width: 100%;
+}
+
+.right {
+  text-align: right;
+}
+
+.section-text h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.text-sobre {
+  font-size: 1.25rem;
+  text-align: justify;
+  width: 700px;
+  font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+}
+
+/* Imagens */
+img {
+  border-radius: 30px;
+  width: 330px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Vídeo */
+iframe {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+  /*.title-primary {
+    font-size: 3rem;
+  }*/
+  .title-secondary {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .text {
+    font-size: 1.1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .section-text {
+    margin: 0;
+  }
+  .section {
+    padding: 15px;
+  }
+  img {
+    width: 230px;
+  }
+  .title-secondary {
+    text-align: center;
+  }
+  #como-surgiu {
+    flex-direction: column-reverse;
+  }
+  .text {
+    padding: 15px;
+    width: 90%;
+  }
+  iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+ /* .title-primary {
+    font-size: 2.5rem;
+  }*/
+  .title-secondary {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .text {
+    font-size: 1rem;
+    padding: 10px;
+    width: auto;
+  }
+  img {
+    width: 200px;
+  }
+}

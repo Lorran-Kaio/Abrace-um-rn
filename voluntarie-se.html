@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voluntarie-se | Abrace um RN</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <app-header></app-header>
+    <main class="container-main">
+      <div class="content-center">
+        <div class="introducao">
+          <h1>Seja um voluntário!</h1>
+          <p>
+            Faça parte da mudança e contribua com o Projeto Abrace um
+            Recém-Nascido! Há diversas maneiras de se envolver e ajudar, de
+            acordo com suas habilidades e disponibilidade.
+          </p>
+          <p>Pronto para se juntar a essa causa?</p>
+          <ul>
+            <li>
+              <strong>Recolhimento de doações:</strong> Se você tem um carro,
+              ajude na coleta.
+            </li>
+            <li>
+              <strong>Oficinas:</strong> Ofereça aulas de costura, crochê,
+              laços, ou outras habilidades.
+            </li>
+            <li>
+              <strong>Apoio psicológico:</strong> Dê suporte emocional às mães.
+            </li>
+          </ul>
+          <p>
+            Preencha o formulário abaixo e venha fazer parte dessa
+            transformação!
+          </p>
+        </div>
+        <form
+          class="container-formulario"
+          autocomplete="on"
+          (submit)="submitForm($event)"
+        >
+          <!-- Campo Nome em uma linha completa -->
+          <div class="form-row">
+            <div class="container-input">
+              <label for="name">Nome *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Digite seu nome completo"
+                [(ngModel)]="formData.nome"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Campos CPF, Telefone e Cidade na mesma linha -->
+          <div class="form-row">
+            <div class="container-input tres-colunas">
+              <label for="cpf">CPF *</label>
+              <input
+                type="text"
+                id="cpf"
+                name="cpf"
+                placeholder="xxx.xxx.xxx-xx"
+                mask="000.000.000-00"
+                [(ngModel)]="formData.cpf"
+                required
+              />
+            </div>
+
+            <div class="container-input tres-colunas">
+              <label for="phone">Telefone *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="(xx) x xxxx-xxxx"
+                mask="(00) 0 0000-0000"
+                [(ngModel)]="formData.telefone"
+                required
+              />
+            </div>
+
+            <div class="container-input tres-colunas">
+              <label for="city">Cidade *</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                [(ngModel)]="formData.cidade"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Campos Tipo de Ajuda e E-mail na mesma linha -->
+          <div class="form-row">
+            <div class="container-input content-tipo-ajuda">
+              <label for="help-type">Tipo de ajuda *</label>
+              <select
+                id="help-type"
+                name="help-type"
+                [(ngModel)]="formData.ajuda"
+                required
+              >
+                <optgroup label="Tipo de ajuda">
+                  <option value="Recolhimento de doações">
+                    Recolhimento de doações
+                  </option>
+                  <option value="oficinas">Oficinas</option>
+                  <option value="psicologico">Apoio psicológico</option>
+                  <option value="outro" selected>Outro</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="container-input content-email-voluntario">
+              <label for="email">E-mail *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                [(ngModel)]="formData.email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Campo Conte como você pode nos ajudar -->
+          <div class="form-row">
+            <div class="container-input">
+              <label for="message">Como você pode nos ajudar?</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                [(ngModel)]="formData.mensagem"
+                placeholder="Qualquer forma de ajuda é bem-vindo"
+              ></textarea>
+            </div>
+          </div>
+
+          <app-botao btn-text="Enviar" variant="rosa-letra-branca"></app-botao>
+        </form>
+      </div>
+    </main>
+    <app-footer></app-footer>
+
+    <app-popup #popup message="Formulário enviado com sucesso!"></app-popup>
+  </body>
+</html>

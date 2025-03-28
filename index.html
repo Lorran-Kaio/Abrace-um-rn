@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abrace um RN</title>
+    <link href="css/globals.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/Logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="mat-typography">
+    <app-header></app-header>
+
+    <main>
+      <section class="home-hero-container">
+        <div class="container">
+          <div class="home-hero__texts">
+            <div class="svg-blob">
+              <img
+                src="./assets/Blob inteiro.svg"
+                alt="Fundo Rosa"
+                class="svg-blob-image"
+              />
+            </div>
+
+            <div class="home-hero__content">
+              <h1>Bem-vindo ao Projeto <span>Abrace um Recém-nascido</span></h1>
+              <p class="p-wrap">
+                Nosso projeto social tem uma missão simples e cheia de amor.
+              </p>
+              <div class="social-icons">
+                <a target="_blank" href="https://www.instagram.com/abraceumrn/">
+                  <img src="./assets/instagram.svg" alt="Instagram" />
+                </a>
+                <a target="_blank" href="#">
+                  <img src="./assets/facebook.svg" alt="Facebook" />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://api.whatsapp.com/send/?phone=5583987075415&text=&type=phone_number&app_absent=0"
+                >
+                  <img src="./assets/wpp.svg" alt="WhatsApp" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-hero__img">
+            <img
+              src="./assets/img-mulher-abracando-bebe.webp"
+              alt="Mãe abraçando bebê"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="app-missao">
+        <div>
+          <img
+            src="./assets/svg-mulher-amamentando-bebe.svg"
+            alt="Mulher amamentando bebe"
+            class="svg-mulher-amamentando"
+            width="131"
+            height="160"
+          />
+          <h1>Apoio às mães vulneráveis</h1>
+          <p>
+            Oferecemos suporte a mães em situação de vulnerabilidade, entregando
+            itens essenciais para garantir um começo seguro e digno aos seus
+            recém-nascidos.
+          </p>
+        </div>
+        <div>
+          <img
+            src="./assets/svg-mulher-abracando-bebe.svg"
+            alt="Mulher abracando bebe"
+            class="svg-mulher-abracando"
+            width="158"
+            height="160"
+          />
+          <h1>Unindo quem doa e quem precisa</h1>
+          <p>
+            Facilitamos o encontro entre mães que precisam de apoio e pessoas
+            dispostas a doar, criando uma ponte de solidariedade.
+          </p>
+        </div>
+        <div>
+          <img
+            src="./assets/svg-dedos-tocando.svg"
+            alt="Dedos tocando"
+            class="svg-dedos-tocando"
+            width="180"
+            height="122"
+          />
+          <h1>Kits que transformam vidas</h1>
+          <p>
+            Cada kit doado ajuda a garantir que essas mães possam retornar para
+            casa com mais segurança e dignidade, sem precisar abandonar seus
+            filhos.
+          </p>
+        </div>
+      </section>
+      <section class="app-participar-doacao">
+        <img
+          src="./assets/svg-detalhe-ondinha.svg"
+          alt="Detalhe ondinha"
+          class="svg-detalhe-ondinha"
+        />
+        <div class="container-preciso-ajuda">
+          <h1>PRECISO DE AJUDA</h1>
+          <p>
+            Se você é mãe e precisa de auxílio para cuidar do seu bebê, clique
+            no botão e preencha seus dados. Entraremos em contato o mais rápido
+            possível.
+          </p>
+          <a href="/receber">
+            <app-botao btn-text="Ajuda" variant="branco-letra-azul">
+            </app-botao>
+          </a>
+        </div>
+        <div class="container-quero-ajuda">
+          <h1>QUERO</h1>
+          <p>
+            Você pode contribuir de várias formas: doando itens usados,
+            dinheiro, ou comprando produtos personalizados na nossa lojinha.
+          </p>
+          <a href="/doar-inicial">
+            <app-botao
+              btn-text="Contribuir"
+              variant="branco-letra-rosa"
+            ></app-botao
+          ></a>
+        </div>
+      </section>
+      <section class="app-conhecer-ajudados">
+        <h1>Conheça alguns dos nossos <span>recém-nascidos </span> ajudados</h1>
+        <div class="container-ajudados">
+          <div class="img-um">
+            <img src="./assets/img-1.png" alt="" width="293" height="379" />
+            <p>
+              Essa mãe estava prestes a doar sua filha ao nascer, em um ato de
+              desespero por não ter condições de cuidar do bebê. Mas Deus agiu
+              através do nosso projeto, e a história tomou um novo rumo. Com sua
+              contribuição, essa transformação foi possível! Hoje, esse bebê
+              está com sua mãe, e sua generosidade mudou suas vidas.
+            </p>
+          </div>
+          <div class="img-dois">
+            <img src="./assets/img-2.png" alt="" width="293" height="379" />
+            <p>
+              Djanete não pôde levar sua bebê para casa após a alta, pois
+              faltavam roupas. Com a nossa doação, elas finalmente voltaram para
+              casa. Djanete, que dorme com três filhos, incluindo um com
+              hidrocefalia, em uma única cama, recebeu berço, colchão, roupas e
+              outros itens essenciais, trazendo mais conforto para sua família.
+            </p>
+          </div>
+          <div class="img-tres">
+            <img src="./assets/img-3.png" alt="" width="293" height="379" />
+            <p>
+              Essa é a mamãe Cida! Seu bebê, Henrique, nasceu em casa, e foi sua
+              filha de 5 anos que o segurou. Sem roupas para aquecer o bebê,
+              chegaram ao hospital, e nós levamos um enxoval completo. Mesmo nas
+              dificuldades, Henrique nasceu saudável e com dignidade. Deus é
+              fiel!
+            </p>
+          </div>
+          <div class="img-quatro">
+            <img src="./assets/img-4.png" alt="" width="293" height="379" />
+            <p>
+              Esta é Aluska, uma gestante de 8 meses que precisa antecipar o
+              parto devido a uma cardiopatia. Com recursos escassos, ela não
+              conseguiu preparar o enxoval da bebê. Graças ao nosso projeto,
+              conseguimos prover tudo o que ela e sua bebê precisavam. Que
+              chegue com saúde, em nome de Jesus!
+            </p>
+          </div>
+        </div>
+        <div class="img-carousel">
+          <swiper-container
+            slidesPerView="1"
+            spaceBetween="10"
+            pagination="true"
+            loop="true"
+          >
+            <swiper-slide>
+              <div class="img-um">
+                <img src="./assets/img-1.png" alt="" width="293" height="379" />
+              </div>
+              <div class="text-overlay" [class.show]="isTextVisible">
+                <button class="close-btn" (click)="toggleTextVisibility()">
+                  ×
+                </button>
+                <p>
+                  Essa mãe estava prestes a doar sua filha ao nascer, em um ato
+                  de desespero por não ter condições de cuidar do bebê. Mas Deus
+                  agiu através do nosso projeto, e a história tomou um novo
+                  rumo. Com sua contribuição, essa transformação foi possível!
+                  Hoje, esse bebê está com sua mãe, e sua generosidade mudou
+                  suas vidas.
+                </p>
+              </div>
+              <button
+                class="pull-up-btn"
+                [class.btn-show]="isTextVisible"
+                (click)="toggleTextVisibility()"
+              >
+                <i class="arrow-icon"></i>
+              </button>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="img-um">
+                <img src="./assets/img-2.png" alt="" width="293" height="379" />
+              </div>
+              <div class="text-overlay" [class.show]="isTextVisible">
+                <button class="close-btn" (click)="toggleTextVisibility()">
+                  ×
+                </button>
+                <p>
+                  Djanete não pôde levar sua bebê para casa após a alta, pois
+                  faltavam roupas. Com a nossa doação, elas finalmente voltaram
+                  para casa. Djanete, que dorme com três filhos, incluindo um
+                  com hidrocefalia, em uma única cama, recebeu berço, colchão,
+                  roupas e outros itens essenciais, trazendo mais conforto para
+                  sua família.
+                </p>
+              </div>
+              <button
+                class="pull-up-btn"
+                [class.btn-show]="isTextVisible"
+                (click)="toggleTextVisibility()"
+              >
+                <i class="arrow-icon"></i>
+              </button>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="img-um">
+                <img src="./assets/img-3.png" alt="" width="293" height="379" />
+              </div>
+              <div class="text-overlay" [class.show]="isTextVisible">
+                <button class="close-btn" (click)="toggleTextVisibility()">
+                  ×
+                </button>
+                <p>
+                  Essa é a mamãe Cida! Seu bebê, Henrique, nasceu em casa, e foi
+                  sua filha de 5 anos que o segurou. Sem roupas para aquecer o
+                  bebê, chegaram ao hospital, e nós levamos um enxoval completo.
+                  Mesmo nas dificuldades, Henrique nasceu saudável e com
+                  dignidade. Deus é fiel!
+                </p>
+              </div>
+              <button
+                class="pull-up-btn"
+                [class.btn-show]="isTextVisible"
+                (click)="toggleTextVisibility()"
+              >
+                <i class="arrow-icon"></i>
+              </button>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="img-um">
+                <img src="./assets/img-4.png" alt="" width="293" height="379" />
+              </div>
+              <div class="text-overlay" [class.show]="isTextVisible">
+                <button class="close-btn" (click)="toggleTextVisibility()">
+                  ×
+                </button>
+                <p>
+                  Esta é Aluska, uma gestante de 8 meses que precisa antecipar o
+                  parto devido a uma cardiopatia. Com recursos escassos, ela não
+                  conseguiu preparar o enxoval da bebê. Graças ao nosso projeto,
+                  conseguimos prover tudo o que ela e sua bebê precisavam. Que
+                  chegue com saúde, em nome de Jesus!
+                </p>
+              </div>
+              <button
+                class="pull-up-btn"
+                [class.btn-show]="isTextVisible"
+                (click)="toggleTextVisibility()"
+              >
+                <i class="arrow-icon"></i>
+              </button>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <div class="content-abaixo-de-ajudados">
+          <span>Confira mais casos em nossa galeria de ajuda!</span>
+          <a href="/galeria"
+            ><app-botao
+              btn-text="Galeria"
+              variant="branco-letra-azul"
+            ></app-botao
+          ></a>
+        </div>
+
+        <div class="rolar-pra-cima"></div>
+      </section>
+      <section class="app-voluntarie-se">
+        <div class="container-voluntarie-se">
+          <h1>SEJA UM VOLUNTÁRIO E TRANSFORME VIDAS</h1>
+          <p>
+            Faça a diferença com a gente! Clique no botão abaixo e veja as
+            várias formas de apoiar essa causa. Escolha como e quando você pode
+            ajudar!
+          </p>
+          <button>
+            <a href="/voluntarie-se.html">Quero ser voluntário</a>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <app-footer></app-footer>
+  </body>
+</html>
