@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap";
 
 :root {
   --rosa-claro: #feebee;
@@ -249,9 +249,12 @@ footer {
 
 /* Botao */
 .botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   outline: none;
-  font-weight: 900;
+  font-weight: 700;
   cursor: pointer;
   border-radius: 30px;
   text-decoration: none;
@@ -294,15 +297,15 @@ footer {
 .botao.branco-letra-azul {
   background-color: white;
   color: var(--azul-escuro);
-  width: 320px;
   height: 110px;
+  width: 100%;
   font-size: 45px;
 }
 
 .botao.branco-letra-rosa {
   background-color: white;
   color: var(--rosa-escuro);
-  width: 320px;
+  width: 100%;
   height: 110px;
   font-size: 45px;
 }

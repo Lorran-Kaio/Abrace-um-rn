@@ -24,7 +24,7 @@
       <section class="home-hero-container">
         <div class="container">
           <div class="home-hero__texts">
-            <div class="svg-blob">
+            <div aria-hidden="true" class="svg-blob">
               <img
                 src="./assets/Blob inteiro.svg"
                 alt="Fundo Rosa"
@@ -34,7 +34,7 @@
 
             <div class="home-hero__content">
               <h1>Bem-vindo ao Projeto <span>Abrace um Recém-nascido</span></h1>
-              <p class="p-wrap">
+              <p>
                 Nosso projeto social tem uma missão simples e cheia de amor.
               </p>
               <div class="social-icons">
@@ -64,6 +64,7 @@
           </div>
         </div>
       </section>
+
       <section class="app-missao">
         <div>
           <img
@@ -110,36 +111,38 @@
           </p>
         </div>
       </section>
+
       <section class="app-participar-doacao">
         <img
           src="./assets/svg-detalhe-ondinha.svg"
           alt="Detalhe ondinha"
           class="svg-detalhe-ondinha"
         />
-        <div class="container-preciso-ajuda">
-          <h1>PRECISO DE AJUDA</h1>
-          <p>
-            Se você é mãe e precisa de auxílio para cuidar do seu bebê, clique
-            no botão e preencha seus dados. Entraremos em contato o mais rápido
-            possível.
-          </p>
-          <a href="/receber">
-            <app-botao btn-text="Ajuda" variant="branco-letra-azul">
-            </app-botao>
-          </a>
-        </div>
-        <div class="container-quero-ajuda">
-          <h1>QUERO</h1>
-          <p>
-            Você pode contribuir de várias formas: doando itens usados,
-            dinheiro, ou comprando produtos personalizados na nossa lojinha.
-          </p>
-          <a href="/doar-inicial">
-            <app-botao
-              btn-text="Contribuir"
-              variant="branco-letra-rosa"
-            ></app-botao
-          ></a>
+
+        <div class="container">
+          <div class="container-preciso-ajuda card-participar-doacao">
+            <h1>PRECISO DE AJUDA</h1>
+            <p>
+              Se você é mãe e precisa de auxílio para cuidar do seu bebê, clique
+              no botão e preencha seus dados. Entraremos em contato o mais
+              rápido possível.
+            </p>
+            <a href="/receber" class="botao branco-letra-azul"> Ajuda </a>
+          </div>
+
+          <div class="container-quero-ajuda card-participar-doacao">
+            <h1>
+              QUERO <br />
+              AJUDAR
+            </h1>
+            <p>
+              Você pode contribuir de várias formas: doando itens usados,
+              dinheiro, ou comprando produtos personalizados na nossa lojinha.
+            </p>
+            <a href="/doar-inicial" class="botao branco-letra-rosa">
+              Contribuir
+            </a>
+          </div>
         </div>
       </section>
       <section class="app-conhecer-ajudados">
@@ -186,116 +189,118 @@
             </p>
           </div>
         </div>
-        <div class="img-carousel">
-          <swiper-container
-            slidesPerView="1"
-            spaceBetween="10"
-            pagination="true"
-            loop="true"
-          >
-            <swiper-slide>
-              <div class="img-um">
-                <img src="./assets/img-1.png" alt="" width="293" height="379" />
-              </div>
-              <div class="text-overlay" [class.show]="isTextVisible">
-                <button class="close-btn" (click)="toggleTextVisibility()">
-                  ×
-                </button>
-                <p>
-                  Essa mãe estava prestes a doar sua filha ao nascer, em um ato
-                  de desespero por não ter condições de cuidar do bebê. Mas Deus
-                  agiu através do nosso projeto, e a história tomou um novo
-                  rumo. Com sua contribuição, essa transformação foi possível!
-                  Hoje, esse bebê está com sua mãe, e sua generosidade mudou
-                  suas vidas.
-                </p>
-              </div>
-              <button
-                class="pull-up-btn"
-                [class.btn-show]="isTextVisible"
-                (click)="toggleTextVisibility()"
-              >
-                <i class="arrow-icon"></i>
-              </button>
-            </swiper-slide>
 
-            <swiper-slide>
-              <div class="img-um">
-                <img src="./assets/img-2.png" alt="" width="293" height="379" />
-              </div>
-              <div class="text-overlay" [class.show]="isTextVisible">
-                <button class="close-btn" (click)="toggleTextVisibility()">
-                  ×
-                </button>
-                <p>
-                  Djanete não pôde levar sua bebê para casa após a alta, pois
-                  faltavam roupas. Com a nossa doação, elas finalmente voltaram
-                  para casa. Djanete, que dorme com três filhos, incluindo um
-                  com hidrocefalia, em uma única cama, recebeu berço, colchão,
-                  roupas e outros itens essenciais, trazendo mais conforto para
-                  sua família.
-                </p>
-              </div>
-              <button
-                class="pull-up-btn"
-                [class.btn-show]="isTextVisible"
-                (click)="toggleTextVisibility()"
-              >
-                <i class="arrow-icon"></i>
-              </button>
-            </swiper-slide>
+        <!-- <div class="img-carousel"> -->
+        <!--   <swiper-container -->
+        <!--     slidesPerView="1" -->
+        <!--     spaceBetween="10" -->
+        <!--     pagination="true" -->
+        <!--     loop="true" -->
+        <!--   > -->
+        <!--     <swiper-slide> -->
+        <!--       <div class="img-um"> -->
+        <!--         <img src="./assets/img-1.png" alt="" width="293" height="379" /> -->
+        <!--       </div> -->
+        <!--       <div class="text-overlay" [class.show]="isTextVisible"> -->
+        <!--         <button class="close-btn" (click)="toggleTextVisibility()"> -->
+        <!--           × -->
+        <!--         </button> -->
+        <!--         <p> -->
+        <!--           Essa mãe estava prestes a doar sua filha ao nascer, em um ato -->
+        <!--           de desespero por não ter condições de cuidar do bebê. Mas Deus -->
+        <!--           agiu através do nosso projeto, e a história tomou um novo -->
+        <!--           rumo. Com sua contribuição, essa transformação foi possível! -->
+        <!--           Hoje, esse bebê está com sua mãe, e sua generosidade mudou -->
+        <!--           suas vidas. -->
+        <!--         </p> -->
+        <!--       </div> -->
+        <!--       <button -->
+        <!--         class="pull-up-btn" -->
+        <!--         [class.btn-show]="isTextVisible" -->
+        <!--         (click)="toggleTextVisibility()" -->
+        <!--       > -->
+        <!--         <i class="arrow-icon"></i> -->
+        <!--       </button> -->
+        <!--     </swiper-slide> -->
+        <!---->
+        <!--     <swiper-slide> -->
+        <!--       <div class="img-um"> -->
+        <!--         <img src="./assets/img-2.png" alt="" width="293" height="379" /> -->
+        <!--       </div> -->
+        <!--       <div class="text-overlay" [class.show]="isTextVisible"> -->
+        <!--         <button class="close-btn" (click)="toggleTextVisibility()"> -->
+        <!--           × -->
+        <!--         </button> -->
+        <!--         <p> -->
+        <!--           Djanete não pôde levar sua bebê para casa após a alta, pois -->
+        <!--           faltavam roupas. Com a nossa doação, elas finalmente voltaram -->
+        <!--           para casa. Djanete, que dorme com três filhos, incluindo um -->
+        <!--           com hidrocefalia, em uma única cama, recebeu berço, colchão, -->
+        <!--           roupas e outros itens essenciais, trazendo mais conforto para -->
+        <!--           sua família. -->
+        <!--         </p> -->
+        <!--       </div> -->
+        <!--       <button -->
+        <!--         class="pull-up-btn" -->
+        <!--         [class.btn-show]="isTextVisible" -->
+        <!--         (click)="toggleTextVisibility()" -->
+        <!--       > -->
+        <!--         <i class="arrow-icon"></i> -->
+        <!--       </button> -->
+        <!--     </swiper-slide> -->
+        <!---->
+        <!--     <swiper-slide> -->
+        <!--       <div class="img-um"> -->
+        <!--         <img src="./assets/img-3.png" alt="" width="293" height="379" /> -->
+        <!--       </div> -->
+        <!--       <div class="text-overlay" [class.show]="isTextVisible"> -->
+        <!--         <button class="close-btn" (click)="toggleTextVisibility()"> -->
+        <!--           × -->
+        <!--         </button> -->
+        <!--         <p> -->
+        <!--           Essa é a mamãe Cida! Seu bebê, Henrique, nasceu em casa, e foi -->
+        <!--           sua filha de 5 anos que o segurou. Sem roupas para aquecer o -->
+        <!--           bebê, chegaram ao hospital, e nós levamos um enxoval completo. -->
+        <!--           Mesmo nas dificuldades, Henrique nasceu saudável e com -->
+        <!--           dignidade. Deus é fiel! -->
+        <!--         </p> -->
+        <!--       </div> -->
+        <!--       <button -->
+        <!--         class="pull-up-btn" -->
+        <!--         [class.btn-show]="isTextVisible" -->
+        <!--         (click)="toggleTextVisibility()" -->
+        <!--       > -->
+        <!--         <i class="arrow-icon"></i> -->
+        <!--       </button> -->
+        <!--     </swiper-slide> -->
+        <!---->
+        <!--     <swiper-slide> -->
+        <!--       <div class="img-um"> -->
+        <!--         <img src="./assets/img-4.png" alt="" width="293" height="379" /> -->
+        <!--       </div> -->
+        <!--       <div class="text-overlay" [class.show]="isTextVisible"> -->
+        <!--         <button class="close-btn" (click)="toggleTextVisibility()"> -->
+        <!--           × -->
+        <!--         </button> -->
+        <!--         <p> -->
+        <!--           Esta é Aluska, uma gestante de 8 meses que precisa antecipar o -->
+        <!--           parto devido a uma cardiopatia. Com recursos escassos, ela não -->
+        <!--           conseguiu preparar o enxoval da bebê. Graças ao nosso projeto, -->
+        <!--           conseguimos prover tudo o que ela e sua bebê precisavam. Que -->
+        <!--           chegue com saúde, em nome de Jesus! -->
+        <!--         </p> -->
+        <!--       </div> -->
+        <!--       <button -->
+        <!--         class="pull-up-btn" -->
+        <!--         [class.btn-show]="isTextVisible" -->
+        <!--         (click)="toggleTextVisibility()" -->
+        <!--       > -->
+        <!--         <i class="arrow-icon"></i> -->
+        <!--       </button> -->
+        <!--     </swiper-slide> -->
+        <!--   </swiper-container> -->
+        <!-- </div> -->
 
-            <swiper-slide>
-              <div class="img-um">
-                <img src="./assets/img-3.png" alt="" width="293" height="379" />
-              </div>
-              <div class="text-overlay" [class.show]="isTextVisible">
-                <button class="close-btn" (click)="toggleTextVisibility()">
-                  ×
-                </button>
-                <p>
-                  Essa é a mamãe Cida! Seu bebê, Henrique, nasceu em casa, e foi
-                  sua filha de 5 anos que o segurou. Sem roupas para aquecer o
-                  bebê, chegaram ao hospital, e nós levamos um enxoval completo.
-                  Mesmo nas dificuldades, Henrique nasceu saudável e com
-                  dignidade. Deus é fiel!
-                </p>
-              </div>
-              <button
-                class="pull-up-btn"
-                [class.btn-show]="isTextVisible"
-                (click)="toggleTextVisibility()"
-              >
-                <i class="arrow-icon"></i>
-              </button>
-            </swiper-slide>
-
-            <swiper-slide>
-              <div class="img-um">
-                <img src="./assets/img-4.png" alt="" width="293" height="379" />
-              </div>
-              <div class="text-overlay" [class.show]="isTextVisible">
-                <button class="close-btn" (click)="toggleTextVisibility()">
-                  ×
-                </button>
-                <p>
-                  Esta é Aluska, uma gestante de 8 meses que precisa antecipar o
-                  parto devido a uma cardiopatia. Com recursos escassos, ela não
-                  conseguiu preparar o enxoval da bebê. Graças ao nosso projeto,
-                  conseguimos prover tudo o que ela e sua bebê precisavam. Que
-                  chegue com saúde, em nome de Jesus!
-                </p>
-              </div>
-              <button
-                class="pull-up-btn"
-                [class.btn-show]="isTextVisible"
-                (click)="toggleTextVisibility()"
-              >
-                <i class="arrow-icon"></i>
-              </button>
-            </swiper-slide>
-          </swiper-container>
-        </div>
         <div class="content-abaixo-de-ajudados">
           <span>Confira mais casos em nossa galeria de ajuda!</span>
           <a href="/galeria"

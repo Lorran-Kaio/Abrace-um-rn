@@ -7,12 +7,6 @@
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .home-hero-container {
-    background-color: #fcdce1;
-  }
-}
-
 .home-hero-container .container {
   display: flex;
   justify-content: space-between;
@@ -37,6 +31,7 @@
   max-width: 1100px;
   width: 100vw;
   min-width: 880px;
+  pointer-events: none;
 }
 
 .home-hero__texts .svg-blob img {
@@ -70,6 +65,7 @@
   max-width: 400px;
   width: 100%;
   font-weight: 500;
+  font-size: 1.125rem;
 }
 
 .home-hero__content .social-icons {
@@ -121,6 +117,12 @@
   }
 }
 
+@media(max-width: 1023px) {
+  .home-hero__img img {
+    transform: translateX(18rem);
+  }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .home-hero__texts {
@@ -141,15 +143,15 @@
 
   .home-hero__img img {
     object-fit: initial;
+    transform: translateX(0);
   }
 }
 
 .app-missao {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 40px;
-  padding: 40px;
+  padding: 50px 40px;
   background: var(--azul-claro);
   flex-wrap: wrap;
 }
@@ -161,7 +163,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  height: 100%;
+}
+
+.app-missao img {
+  height: 160px;
+}
+
+.app-missao .svg-dedos-tocando {
+  max-width: 234px;
+  width: 100%;
 }
 
 .app-missao h1 {
@@ -173,11 +184,10 @@
   text-align: center;
   font-size: 24px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 25px;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 2rem;
-  /* Espaço abaixo do título */
   margin-top: 30px;
 }
 
@@ -207,8 +217,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 40px;
-  /* Espaço acima do parágrafo */
 }
 
 #apoio-maes p {
@@ -231,29 +239,57 @@
   .app-missao {
     flex-wrap: wrap;
     gap: 20px;
+    padding: 50px 1.5rem;
   }
 }
 
 .app-participar-doacao {
   width: 100%;
-  height: 1000px;
-  flex-shrink: 0;
   background: #daf1f2;
   position: relative;
+  padding: 180px 0;
+}
+
+.app-participar-doacao .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
-  padding: 0;
+  gap: 50px;
+}
+
+@media(max-width: 1058px) {
+
+  .app-participar-doacao .container {
+    justify-content: center;
+  }
+}
+
+.app-participar-doacao .botao {
+  max-width: 320px;
 }
 
 .svg-detalhe-ondinha {
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+}
+
+.card-participar-doacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+  padding: 5rem 2rem;
+  border-radius: 30px;
+  height: 100%;
+  max-height: 580px;
+  max-width: 472px;
+  width: 100%;
 }
 
 .container-preciso-ajuda {
@@ -264,100 +300,64 @@
   background: #fcdce1;
 }
 
-.container-preciso-ajuda,
-.container-quero-ajuda {
-  border-radius: 30px;
-  width: 472px;
-  height: 581px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card-participar-doacao h1 {
   text-align: center;
-  margin: 50px;
-  position: relative;
-}
-
-.container-preciso-ajuda h1 {
-  width: 300px;
-  color: var(--azul-escuro);
-  text-align: center;
-  font-weight: 900;
+  font-weight: 800;
   font-family: "Montserrat", sans-serif;
-  font-size: 44px;
-  font-style: normal;
-  font-weight: 900;
+  font-size: 2.75rem;
   line-height: normal;
 }
 
-.container-preciso-ajuda p {
+.card-participar-doacao p {
   display: flex;
-  width: 408px;
-  height: 163px;
   flex-direction: column;
   justify-content: center;
-  color: var(--azul-escuro);
-  text-align: center;
-  font-size: 24px;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
+  max-width: 408px;
+  width: 100%;
+  height: 163px;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .card-participar-doacao {
+    padding: 3.5rem 1rem;
   }
+
+  .card-participar-doacao h1 {
+    font-size: 2rem;
+  }
+
+  .card-participar-doacao p {
+    font-size: 1.25rem;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .card-participar-doacao .botao {
+    font-size: 2rem;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 22px;
+  }
+}
+
+.container-preciso-ajuda h1 {
+  color: var(--azul-escuro);
+}
+
+.container-preciso-ajuda p {
+  color: var(--azul-escuro);
 }
 
 .container-quero-ajuda h1 {
   color: var(--rosa-escuro);
-  text-align: center;
-  font-weight: 900;
-  font-family: "Montserrat", sans-serif;
-  font-size: 44px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-}
-
-.container-quero-ajuda h1::after {
-  content: "AJUDAR";
-  display: block;
 }
 
 .container-quero-ajuda p {
-  display: flex;
-  width: 408px;
-  height: 163px;
-  flex-direction: column;
-  justify-content: center;
   color: var(--rosa-escuro);
-  text-align: center;
-  font-size: 24px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .app-participar-doacao {
-    flex-direction: column;
-    /* Alinha os contêineres verticalmente */
-    height: auto;
-    /* Ajusta a altura automaticamente */
-    padding: 20px 0;
-    /* Espaçamento na parte superior e inferior da seção */
-  }
-
-  .container-preciso-ajuda,
-  .container-quero-ajuda {
-    width: 90%;
-    /* Ajusta a largura dos contêineres para telas pequenas */
-    height: auto;
-    /* Deixa a altura flexível */
-    margin: 20px auto;
-    /* Centraliza e adiciona margens */
-    margin-top: 50px;
-  }
 }
 
 .app-conhecer-ajudados {
