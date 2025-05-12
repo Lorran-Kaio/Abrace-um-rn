@@ -65,7 +65,8 @@
   max-width: 400px;
   width: 100%;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  line-height: 1.25;
 }
 
 .home-hero__content .social-icons {
@@ -256,6 +257,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 50px;
+  max-width: 1140px;
 }
 
 @media(max-width: 1058px) {
@@ -362,10 +364,7 @@
 
 .app-conhecer-ajudados {
   width: 100%;
-  /* height: 100%; */
   flex-shrink: 0;
-  padding: 20px;
-  overflow-x: scroll;
 
   h1 {
     width: 100%;
@@ -374,7 +373,7 @@
     color: var(--rosa-escuro);
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
-    font-size: 60px;
+    font-size: 3.25rem;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -384,8 +383,8 @@
   }
 
   .container-ajudados {
-    width: 1400px;
-    height: 850px;
+    max-width: 1400px;
+    width: 100%;
     display: flex;
     flex-shrink: 0;
     gap: 20px;
@@ -394,7 +393,6 @@
     margin: auto;
     margin-top: 50px;
     padding: 50px;
-    overflow: scroll;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -421,22 +419,21 @@
 
   .content-abaixo-de-ajudados {
     margin-top: 50px;
+    margin-bottom: 30px;
+    width: 100%;
     text-align: center;
     align-items: center;
     display: flex;
-    /* Define como flexbox */
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Centraliza verticalmente */
 
     @media (max-width: 768px) {
       flex-direction: column;
     }
 
     span {
-      width: 500px;
-      height: 100px;
+      max-width: 500px;
+      height: 100%;
       justify-content: space-between;
       font-size: 43px;
       font-style: normal;
@@ -454,49 +451,73 @@
   }
 }
 
+.app-conhecer-ajudados .carousel {
+  max-width: 1440px;
+  margin: 0 auto;
+  --bs-carousel-indicator-active-bg: var(--azul-escuro);
+}
+
+#carousel-conhecer-ajudados .carousel-control-prev,
+#carousel-conhecer-ajudados .carousel-control-next {
+  position: static;
+  --bs-carousel-control-icon-filter: brightness(0) saturate(100%) invert(91%) sepia(86%) saturate(1663%) hue-rotate(143deg) brightness(79%) contrast(80%);
+}
+
+#carousel-conhecer-ajudados .carousel-control-next-icon,
+#carousel-conhecer-ajudados .carousel-control-prev-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+#carousel-conhecer-ajudados .carousel-indicators {
+  position: static;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+#carousel-conhecer-ajudados .carousel-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-abaixo-de-ajudados .botao {
+  max-width: 320px;
+}
+
 .app-voluntarie-se {
   width: 100%;
-  height: 526px;
+  padding: 6rem 0;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  /* Centraliza o conteúdo horizontalmente */
   align-items: center;
-  /* Centraliza o conteúdo verticalmente */
   background-color: #daf1f2;
-  /* Adicionei uma cor de fundo suave */
   margin-bottom: 10px;
 }
 
 .container-voluntarie-se {
-  width: 649px;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  width: 100%;
+  max-width: 630px;
 }
 
 .container-voluntarie-se h1 {
   font-size: 32px;
-  /* Tamanho ajustado para proporção do container */
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 20px;
-  /* Espaçamento inferior entre o título e o parágrafo */
   color: #4cb9b9;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 43px;
   font-style: normal;
   font-weight: 800;
   line-height: 43.624px;
-  /* 101.451% */
   text-transform: uppercase;
 }
 
@@ -504,13 +525,12 @@
   width: 609px;
   color: #4bb9ba;
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin-bottom: 20px;
-  /* Espaçamento inferior entre o parágrafo e o botão */
 
   @media (max-width: 768px) {
     width: 100%;
@@ -518,54 +538,76 @@
   }
 }
 
-.container-voluntarie-se button {
-  width: 410px;
-  height: 119px;
-  background-color: #fff;
-  /* Cor de fundo do botão */
-  border: none;
-  border-radius: 27.591px;
-  display: flex;
-  justify-content: center;
-  /* Centraliza o texto dentro do botão */
-  align-items: center;
-  /* Centraliza verticalmente */
-  cursor: pointer;
-  margin-top: 20px;
-  /* Espaçamento superior entre o botão e o parágrafo */
-
-  @media (max-width: 768px) {
-    width: 200px;
-    height: 80px;
-  }
-}
-
-.container-voluntarie-se button a {
-  width: 372px;
-  height: 42px;
-  flex-shrink: 0;
-  text-decoration: none;
-  color: #f68597;
-  font-family: Montserrat;
-  font-size: 33px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-
-  @media (max-width: 768px) {
-    font-size: 17px;
-  }
-}
-
-.container-voluntarie-se button:hover {
-  background-color: #eaeef1;
-}
-
-.img-carousel {
-  display: none;
+.container-voluntarie-se .botao {
+  font-size: 2rem;
+  width: max-content;
 }
 
 @media (max-width: 768px) {
+  .container-voluntarie-se h1 {
+    font-size: 2.25rem;
+  }
+
+  .container-voluntarie-se .botao {
+    width: 100%;
+  }
+}
+
+.card-ajudados {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card-ajudados img {
+  max-width: 393px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-ajudados p {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 920px) {
+  .card-ajudados {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-ajudados img {
+    height: 100%;
+    max-height: 424px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .card-ajudados p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-conhecer-ajudados.container {
+    padding: 0 1rem;
+  }
+
+  .app-conhecer-ajudados h1 {
+    font-size: 2.25rem;
+  }
+
+  .card-ajudados p {
+    font-size: 1.125rem;
+  }
+
+  #carousel-conhecer-ajudados .carousel-control-next-icon,
+  #carousel-conhecer-ajudados .carousel-control-prev-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
   .img-carousel {
     display: block;
   }

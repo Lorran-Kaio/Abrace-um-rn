@@ -1,5 +1,6 @@
 class AppHeader extends HTMLElement {
   connectedCallback() {
+    const currentPage = window.location.pathname
     this.innerHTML = `
     <header class="app-header">
       <div class="container app-header-content">
@@ -10,19 +11,19 @@ class AppHeader extends HTMLElement {
         <div class="desktop-nav">
           <ul class="desktop-nav-links">
             <li>
-              <a href="/">Home</a>
+              <a class="${currentPage === "/" ? "active" : ""}" href="/">Início</a>
             </li>
             <li>
-              <a href="/galeria.html">Galeria</a>
+              <a class="${currentPage === "galeria.html" ? "active" : ""}" href="/galeria.html">Galeria</a>
             </li>
             <li>
-              <a href="/lojinha.html">Lojinha</a>
+              <a class="${currentPage === "lojinha.html" ? "active" : ""}" href="/lojinha.html">Lojinha</a>
             </li>
             <li>
-              <a href="/voluntarie-se.html">Voluntarie-se</a>
+              <a class="${currentPage === "voluntarie-se.html" ? "active" : ""}" href="/voluntarie-se.html">Voluntarie-se</a>
             </li>
             <li>
-              <a href="/sobre">Sobre</a>
+              <a class="${currentPage === "sobre.html" ? "active" : ""}" href="/sobre">Sobre</a>
             </li>
           </ul>
 
@@ -47,7 +48,7 @@ class AppHeader extends HTMLElement {
         <div class="sidebar" [class.show]="isSidebarOpen">
           <ul class="nav-links sidebar-nav-links">
             <li>
-              <a [class.active]="isActive('/home')" href="index.html">Home</a>
+              <a [class.active]="isActive('/home')" href="index.html">Início</a>
             </li>
             <li>
               <a [class.active]="isActive('/galeria')" href="/galeria.html">Galeria</a>
