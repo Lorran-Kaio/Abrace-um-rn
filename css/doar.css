@@ -1,0 +1,85 @@
+.content-center {
+  min-height: calc(100dvh - 176px);
+  padding: 100px 0px;
+}
+
+.card {
+  background-color: #fcdce1;
+  border-radius: 20px;
+  border: none;
+  min-height: 200px;
+  
+  margin-top: 80px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  & .card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-top: 90px;
+
+    & h5 {
+      color: var(--rosa-escuro);
+      font-weight: 700;
+      font-size: 24px;
+      padding: 0px 20px;
+    }
+
+    & p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: justify;
+
+      color: var(--rosa-escuro);
+      font-weight: 500;
+      font-size: 16px;
+      padding: 30px 20px;
+      height: 100%;
+    }
+
+    & img {
+      position: absolute;
+      width: 150px;
+      height: auto;
+      top: -50px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+}
+
+.dynamic-content {
+  margin-top: 8rem;
+}
+
+.btn-lojinha {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: var(--rosa-escuro); /* rosa */
+  border: 2px solid var(--rosa-escuro);
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-lojinha:hover {
+  background-color: var(--rosa-escuro);
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .cards-container {
+    gap: 80px;
+  }
+}
