@@ -197,6 +197,43 @@
             </div>
           </div>
 
+          <!-- Fonte de renda -->
+          <div class="form-row">
+            <div class="container-input">
+              <div class="content-autorizacao">
+                <div class="label-autorizacao">
+                  <label
+                    >Você possui alguma fonte de renda fixa?</label
+                  >
+                </div>
+                <div class="opcoes-autorizacao">
+                  <label for="autorizo-sim" class="custom-radio">
+                    <input
+                      type="radio"
+                      id="autorizo-sim"
+                      name="autorizacao"
+                      value="sim"
+                      [(ngModel)]="formData.autorizacao"
+                      required
+                    />
+                    Sim
+                  </label>
+                  <label for="autorizo-nao" class="custom-radio">
+                    <input
+                      type="radio"
+                      id="autorizo-nao"
+                      name="autorizacao"
+                      value="nao"
+                      [(ngModel)]="formData.autorizacao"
+                      required
+                    />
+                    Não
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Email -->
           <div class="form-row">
             <div class="container-input">
@@ -215,11 +252,12 @@
           <div class="form-row">
             <div class="container-input">
               <label for="historia">Fale sobre sua situação:</label>
+              <p>Contar sua história nos permite conhecer melhor o que você está vivendo, para cuidar com mais atenção e carinho de você e do seu bebê!</p>
               <textarea
                 id="historia"
                 name="historia"
                 rows="5"
-                placeholder="Contar sua história nos permite conhecer melhor o que você está vivendo, para cuidar com mais atenção e carinho de você e do seu bebê."
+                placeholder="Ex.; Me chamo Ana, tenho 27 anos e descobri uma gravidez num momento difícil, sem dinheiro e sozinha. O pai sumiu e vivo de bicos, mas estou seguindo com força e amor, por isso preciso da sua ajuda!"
                 [(ngModel)]="formData.historia"
                 required
               ></textarea>
