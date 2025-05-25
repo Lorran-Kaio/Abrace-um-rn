@@ -4,7 +4,7 @@ class AppHeader extends HTMLElement {
     this.innerHTML = `
     <header class="app-header">
       <div class="container app-header-content">
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
           <img src="assets/Logo.png" width="80" height="60" />
         </a>
 
@@ -23,7 +23,7 @@ class AppHeader extends HTMLElement {
               <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="/voluntarie-se.html">Voluntarie-se</a>
             </li>
             <li>
-              <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre">Sobre</a>
+              <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre.html">Sobre</a>
             </li>
           </ul>
 
@@ -47,7 +47,7 @@ class AppHeader extends HTMLElement {
 
         <div class="offcanvas sidebar-container offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
               <img src="assets/Logo.png" width="80" height="60" />
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
@@ -68,7 +68,7 @@ class AppHeader extends HTMLElement {
                 <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="/voluntarie-se.html">Voluntarie-se</a>
               </li>
               <li>
-                <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre">Sobre</a>
+                <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre.html">Sobre</a>
               </li>
             </ul>
 

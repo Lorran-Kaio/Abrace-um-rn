@@ -40,6 +40,22 @@ body {
   margin: 0 auto;
 }
 
+.toast {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+}
+
+.bg-azul {
+  background-color: var(--azul-claro);
+  height: 100%;
+}
+
 /* Header */
 .app-header {
   background-color: var(--rosa-claro);
