@@ -24,6 +24,7 @@
     <link href="css/globals.css" rel="stylesheet" />
 
     <script defer src="js/custom-elements.js"></script>
+    <script defer src="js/form-receber.js"></script>
   </head>
   <body>
     <app-header></app-header>
@@ -33,11 +34,7 @@
           <h1>Conte com a gente!</h1>
           <p>Preencha seus dados para receber a ajuda que precisa</p>
         </div>
-        <form
-          class="container-formulario"
-          autocomplete="on"
-          (submit)="submitForm($event)"
-        >
+        <form class="container-formulario" autocomplete="on" id="form-receber">
           <!-- Nome -->
           <div class="form-row">
             <div class="container-input">
@@ -47,7 +44,6 @@
                 id="nome"
                 name="nome"
                 placeholder="Nome completo"
-                [(ngModel)]="formData.nome"
                 required
               />
             </div>
@@ -61,9 +57,7 @@
                 type="text"
                 id="cpf"
                 name="cpf"
-                mask="000.000.000-00"
                 placeholder="xxx.xxx.xxx-xx"
-                [(ngModel)]="formData.cpf"
                 required
               />
             </div>
@@ -73,9 +67,7 @@
                 type="tel"
                 id="telefone"
                 name="telefone"
-                mask="(00) 0 0000-0000"
                 placeholder="(xx) x xxxx-xxxx"
-                [(ngModel)]="formData.telefone"
                 required
               />
             </div>
@@ -85,7 +77,6 @@
                 type="date"
                 id="data-parto"
                 name="data-parto"
-                [(ngModel)]="formData.dataParto"
                 required
               />
             </div>
@@ -95,12 +86,7 @@
           <div class="form-row">
             <div class="container-input tres-colunas">
               <label for="sexo-bebe">Sexo do Bebê:</label>
-              <select
-                id="sexo-bebe"
-                name="sexo-bebe"
-                [(ngModel)]="formData.sexoBebe"
-                required
-              >
+              <select id="sexo-bebe" name="sexo-bebe" required>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
                 <option value="nao-informar">Prefiro não informar</option>
@@ -113,7 +99,6 @@
                 id="tempo-gestacao"
                 name="tempo-gestacao"
                 placeholder="Tempo de gestação"
-                [(ngModel)]="formData.tempoGestacao"
                 required
               />
             </div>
@@ -124,7 +109,6 @@
                 id="instagram"
                 name="instagram"
                 placeholder="@SeuInstagram"
-                [(ngModel)]="formData.instagram"
               />
             </div>
           </div>
@@ -138,7 +122,6 @@
                 id="rua"
                 name="rua"
                 placeholder="Nome da sua rua"
-                [(ngModel)]="formData.rua"
                 required
               />
             </div>
@@ -149,7 +132,6 @@
                 id="numero"
                 name="numero"
                 placeholder="Número da sua casa"
-                [(ngModel)]="formData.numero"
                 required
               />
             </div>
@@ -159,17 +141,35 @@
           <div class="form-row">
             <div class="container-input tres-colunas">
               <label for="estado">Estado:</label>
-              <select
-                id="estado"
-                name="estado"
-                aria-placeholder="Estado que você mora"
-                [(ngModel)]="formData.estado"
-                required
-              >
+              <select id="estado" name="estado" required>
                 <option value="" disabled selected>Selecione o estado</option>
-                <option *ngFor="let estado of estados" [value]="estado">
-                  Paraíba
-                </option>
+                <option value="Acre">Acre</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Amapá">Amapá</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceará">Ceará</option>
+                <option value="Distrito Federal">Distrito Federal</option>
+                <option value="Espírito Santo">Espírito Santo</option>
+                <option value="Goiás">Goiás</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Pará">Pará</option>
+                <option value="Paraíba">Paraíba</option>
+                <option value="Paraná">Paraná</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Piauí">Piauí</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Rondônia">Rondônia</option>
+                <option value="Roraima">Roraima</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="Tocantins">Tocantins</option>
               </select>
             </div>
             <div class="container-input tres-colunas">
@@ -178,9 +178,7 @@
                 type="text"
                 id="cep"
                 name="cep"
-                mask="00000-000"
                 placeholder="xxxxx-xxx"
-                [(ngModel)]="formData.cep"
                 required
               />
             </div>
@@ -191,7 +189,6 @@
                 id="cidade"
                 name="cidade"
                 placeholder="Digite sua cidade"
-                [(ngModel)]="formData.cidade"
                 required
               />
             </div>
@@ -202,29 +199,25 @@
             <div class="container-input">
               <div class="content-autorizacao">
                 <div class="label-autorizacao">
-                  <label
-                    >Você possui alguma fonte de renda fixa?</label
-                  >
+                  <label>Você possui alguma fonte de renda fixa?</label>
                 </div>
                 <div class="opcoes-autorizacao">
-                  <label for="autorizo-sim" class="custom-radio">
+                  <label for="tenho-sim" class="custom-radio">
                     <input
                       type="radio"
-                      id="autorizo-sim"
-                      name="autorizacao"
+                      id="tenho-sim"
+                      name="renda"
                       value="sim"
-                      [(ngModel)]="formData.autorizacao"
                       required
                     />
                     Sim
                   </label>
-                  <label for="autorizo-nao" class="custom-radio">
+                  <label for="tenho-nao" class="custom-radio">
                     <input
                       type="radio"
-                      id="autorizo-nao"
-                      name="autorizacao"
+                      id="tenho-nao"
+                      name="renda"
                       value="nao"
-                      [(ngModel)]="formData.autorizacao"
                       required
                     />
                     Não
@@ -243,28 +236,30 @@
                 id="email"
                 name="email"
                 placeholder="Seu e-mail"
-                [(ngModel)]="formData.email"
                 required
               />
             </div>
           </div>
 
+          <!-- História -->
           <div class="form-row">
             <div class="container-input">
               <label for="historia">Fale sobre sua situação:</label>
-              <p>Contar sua história nos permite conhecer melhor o que você está vivendo, para cuidar com mais atenção e carinho de você e do seu bebê!</p>
+              <p>
+                Contar sua história nos permite conhecer melhor o que você está
+                vivendo, para cuidar com mais atenção e carinho de você e do seu bebê!
+              </p>
               <textarea
                 id="historia"
                 name="historia"
                 rows="5"
-                placeholder="Ex.; Me chamo Ana, tenho 27 anos e descobri uma gravidez num momento difícil, sem dinheiro e sozinha. O pai sumiu e vivo de bicos, mas estou seguindo com força e amor, por isso preciso da sua ajuda!"
-                [(ngModel)]="formData.historia"
+                placeholder="Ex.: Me chamo Ana, tenho 27 anos e descobri uma gravidez num momento difícil, sem dinheiro e sozinha. O pai sumiu e vivo de bicos, mas estou seguindo com força e amor, por isso preciso da sua ajuda!"
                 required
               ></textarea>
             </div>
           </div>
 
-          <!-- Autorizacao -->
+          <!-- Autorização uso de imagem -->
           <div class="form-row">
             <div class="container-input">
               <div class="content-autorizacao">
@@ -282,7 +277,6 @@
                       id="autorizo-sim"
                       name="autorizacao"
                       value="sim"
-                      [(ngModel)]="formData.autorizacao"
                       required
                     />
                     Sim
@@ -293,7 +287,6 @@
                       id="autorizo-nao"
                       name="autorizacao"
                       value="nao"
-                      [(ngModel)]="formData.autorizacao"
                       required
                     />
                     Não
@@ -302,10 +295,26 @@
               </div>
             </div>
           </div>
+
           <div class="buttonContainer">
-            <button type="submit">Enviar</button>
+            <button type="submit" id="sendFormReceber">Enviar</button>
           </div>
         </form>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="meuToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Sucesso</strong>
+            <small>Agora</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fechar"></button>
+          </div>
+          <div class="toast-body">
+            <p>
+              O formulário foi enviado com sucesso!
+            </p>
+          </div>
+        </div>
       </div>
     </main>
     <app-footer></app-footer>

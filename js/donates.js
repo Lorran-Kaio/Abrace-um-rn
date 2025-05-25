@@ -4,19 +4,23 @@ function mostrarSection(tipo) {
 
   if (tipo === 'money' || tipo === undefined) {
     html = `
-      <div class="mt-5">
+      <div class="mt-5 bg-white rounded-4 p-3">
         <div class="qr-container">
           <h2 class="h3 mb-4 fw-semibold">Faça sua doação aqui:</h2>
-          <img class="qr-code" src="https://codigosdebarrasbrasil.com.br/wp-content/uploads/2019/09/codigo_qr-300x300.png" width="200" height="auto" alt="QR Code">
-          <h2 class="mt-2">Chave PIX: exemplo@pix.com</h2>
-          <button id="btnChavePix" class="mt-2 btn-lojinha">Copiar chave PIX</button>
+          <div class="gap-3">
+            <img class="qr-code" src="./assets/qrcode-pix.jpeg" width="200" height="auto" alt="QR Code">
+            <h2 class="mt-2 px-3 fw-semibold">Chave PIX: 262.191.664-34</h2>
+            <h2 class="mt-2 px-3 fw-semibold">Nome: Maria Cavalcanti Freire</h2>
+            <h2 class="mt-2 px-3 fw-semibold">Banco: Banco do Brasil</h2>
+            <button id="btnChavePix" class="mt-3 btn-donate">Copiar chave PIX</button>
+          </div>
           <script>
             function copyPix() {
-                navigator.clipboard.writeText('CHAVE AQUI')
+                navigator.clipboard.writeText('26219166434')
             }
             const btn = document.getElementById('btnChavePix')
             btn.addEventListener('click', () => {
-              copyPix()           
+              copyPix()         
             })      
           </script>
         </div>
@@ -24,7 +28,7 @@ function mostrarSection(tipo) {
     `;
   } else if (tipo === 'used') {
     html = `
-      <div class="map-section mt-5">
+      <div class="map-section mt-5 bg-white rounded-4 p-3">
         <h2 class="h3 mb-4 fw-semibold">Nosso ponto de coleta:</h2>
 
         <div class="mb-4">
@@ -74,7 +78,7 @@ function mostrarSection(tipo) {
           transform: scale(1.05);
         }
       </style>
-      <div class="mt-5">
+      <div class="mt-5 bg-white rounded-4 p-3">
         <h2 class="h3 mb-4 fw-semibold">Visite Nossa Lojinha Virtual!</h2>
         <p>
           Que tal apoiar uma causa especial e, ao mesmo tempo, levar para

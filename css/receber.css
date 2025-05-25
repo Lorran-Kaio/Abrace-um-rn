@@ -164,10 +164,15 @@ form.container-formulario {
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all .3s;
+  filter: grayscale(0);
 
   &:hover {
     background-color: #f787ab;
     padding: 10px 50px;
+  }
+
+  &:disabled {
+    filter: grayscale(0.5);
   }
 }
 p {
