@@ -7,9 +7,9 @@ function limparCPF(cpf) {
 
 async function cpfDuplicado(cpf) {
   const cpfLimpo = limparCPF(cpf);
-  const response = await fetch("https://sheetdb.io/api/v1/j7z1tsiircwdc");
+  const response = await fetch(`https://sheetdb.io/api/v1/j7z1tsiircwdc/search?cpf=${cpfLimpo}`);
   const data = await response.json();
-  return data.some(item => limparCPF(item.cpf) === cpfLimpo);
+  return data.length > 0
 }
 
 document.getElementById("form-receber").addEventListener("submit", async function (event) {

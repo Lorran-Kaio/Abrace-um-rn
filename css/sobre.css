@@ -27,14 +27,14 @@ body {
 
 .fundo-claro {
   background-color: #feebee;
-  color: #d16d7d;
+  color: #f68597;
     & h1{
     font-weight: bold;
   }
 }
 
 .fundo-escuro {
-  background-color: #8deced;
+  background-color: #8fd3d5;
   color: #4bb9ba;
     & h1{
     font-weight: bold;
