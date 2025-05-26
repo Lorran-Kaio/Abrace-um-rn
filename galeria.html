@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -30,51 +30,270 @@
       defer
     ></script>
     <script defer src="js/custom-elements.js"></script>
+    <script defer src="js/galeria.js"></script>
   </head>
   <body>
     <app-header></app-header>
 
     <main class="bg-azul">
-      <section class="container galeria-ajudas-section">
-        <h1 class="text-center h1">Galeria</h1>
-        <p class="text-center lead">
+      <section class="container galeria-ajudas-section py-5">
+        <h1 class="text-center h1 mb-3">Galeria</h1>
+        <p class="text-center lead mb-5">
           Veja as fotos dos nossos eventos e ações.
         </p>
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <img
-              src="assets/img-galeria-1.jpg"
-              alt="Galeria 1"
-              class="img-fluid rounded"
-            />
+
+        <!-- Layout masonry responsivo -->
+        <div class="masonry-grid">
+          <div class="masonry-item">
+            <div class="galeria-card">
+              <div class="image-container">
+                <img
+                  src="assets/img-galeria-1.jpg"
+                  alt="Entrega de kits para recém-nascidos"
+                  class="galeria-img"
+                />
+                <div class="image-overlay">
+                  <span class="zoom-icon">🔍</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="image-caption">
+                  Entrega de kits essenciais para recém-nascidos em situação de
+                  vulnerabilidade
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <img
-              src="assets/img-galeria-2.jpg"
-              alt="Galeria 2"
-              class="img-fluid rounded"
-            />
+
+          <div class="masonry-item">
+            <div class="galeria-card">
+              <div class="image-container">
+                <img
+                  src="assets/img-galeria-2.jpg"
+                  alt="Ação de distribuição de doações"
+                  class="galeria-img"
+                />
+                <div class="image-overlay">
+                  <span class="zoom-icon">🔍</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="image-caption">
+                  Momento especial de distribuição de doações para famílias
+                  necessitadas
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <img
-              src="assets/img-galeria-3.jpg"
-              alt="Galeria 3"
-              class="img-fluid rounded"
-            />
+
+          <div class="masonry-item">
+            <div class="galeria-card">
+              <div class="image-container">
+                <img
+                  src="assets/img-galeria-3.jpg"
+                  alt="Workshop de cuidados com bebês"
+                  class="galeria-img"
+                />
+                <div class="image-overlay">
+                  <span class="zoom-icon">🔍</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="image-caption">
+                  Workshop educativo sobre cuidados essenciais com
+                  recém-nascidos
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <img
-              src="assets/img-galeria-4.jpg"
-              alt="Galeria 4"
-              class="img-fluid rounded"
-            />
+
+          <div class="masonry-item">
+            <div class="galeria-card">
+              <div class="image-container">
+                <img
+                  src="assets/img-galeria-4.jpg"
+                  alt="Voluntários organizando doações"
+                  class="galeria-img"
+                />
+                <div class="image-overlay">
+                  <span class="zoom-icon">🔍</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="image-caption">
+                  Nossos voluntários organizando e preparando as doações
+                  recebidas
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <img
-              src="assets/img-galeria-5.jpg"
-              alt="Galeria 5"
-              class="img-fluid rounded"
-            />
+
+          <div class="masonry-item">
+            <div class="galeria-card">
+              <div class="image-container">
+                <img
+                  src="assets/img-galeria-5.jpg"
+                  alt="Evento beneficente da organização"
+                  class="galeria-img"
+                />
+                <div class="image-overlay">
+                  <span class="zoom-icon">🔍</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="image-caption">
+                  Evento beneficente reunindo a comunidade em prol da causa
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="masonry-item">
+            <div class="galeria-card">
+              <div class="image-container">
+                <img
+                  src="assets/img-galeria-6.jpg"
+                  alt="Mães recebendo apoio e orientação"
+                  class="galeria-img"
+                />
+                <div class="image-overlay">
+                  <span class="zoom-icon">🔍</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="image-caption">
+                  Momento de apoio e orientação para mães em período pós-parto
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="masonry-item">
+            <div class="galeria-card">
+              <div class="image-container">
+                <img
+                  src="assets/img-galeria-7.jpg"
+                  alt="Parceria com instituições locais"
+                  class="galeria-img"
+                />
+                <div class="image-overlay">
+                  <span class="zoom-icon">🔍</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="image-caption">
+                  Fortalecimento de parcerias com instituições locais
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal detalhado para cada beneficiada -->
+        <div
+          class="modal fade"
+          id="galeriaModal"
+          tabindex="-1"
+          aria-labelledby="galeriaModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="galeriaModalLabel">
+                  História de Superação
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="row g-4">
+                  <!-- Coluna da imagem -->
+                  <div class="col-lg-6">
+                    <div class="modal-image-container">
+                      <img id="modalImage" src="" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+
+                  <!-- Coluna das informações -->
+                  <div class="col-lg-6">
+                    <div class="beneficiada-info">
+                      <h3 class="beneficiada-nome" id="modalNome"></h3>
+
+                      <div class="info-section">
+                        <h6 class="info-title">Sua História</h6>
+                        <p
+                          class="beneficiada-descricao"
+                          id="modalDescricao"
+                        ></p>
+                      </div>
+
+                      <div class="info-section">
+                        <h6 class="info-title">Tipo de Ajuda Recebida</h6>
+                        <span
+                          id="modalTipoAjuda"
+                          class="tipo-ajuda-badge"
+                        ></span>
+                      </div>
+
+                      <div class="info-section">
+                        <h6 class="info-title">Entre em Contato Conosco</h6>
+                        <div class="contato-links">
+                          <a
+                            id="modalWhatsapp"
+                            href=""
+                            target="_blank"
+                            class="contato-link whatsapp"
+                          >
+                            <img
+                              src="assets/wpp.svg"
+                              alt="WhatsApp"
+                              class="contato-icon"
+                            />
+                            <span></span>
+                          </a>
+                          <a
+                            id="modalInstagram"
+                            href=""
+                            target="_blank"
+                            class="contato-link instagram"
+                          >
+                            <img
+                              src="assets/instagram.svg"
+                              alt="Instagram"
+                              class="contato-icon"
+                            />
+                            <span></span>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="info-section">
+                        <p class="modal-cta">
+                          Você também pode fazer a diferença na vida de outras
+                          famílias!
+                        </p>
+                        <div class="modal-buttons">
+                          <a
+                            href="doar-inicial.html"
+                            class="botao pequeno-rosa"
+                          >
+                            Quero Ajudar
+                          </a>
+                          <a href="receber.html" class="botao pequeno-azul">
+                            Quero Receber Ajuda
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
