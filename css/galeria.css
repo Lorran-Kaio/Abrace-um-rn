@@ -8,6 +8,17 @@
   font-weight: 500;
 }
 
+.galeria-kits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.galeria-kits-container .image-container {
+  max-height: 520px;
+}
+
 /* Layout Masonry Sofisticado */
 .masonry-grid {
   column-count: 3;
@@ -33,18 +44,21 @@
 }
 
 .galeria-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
 .image-container {
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .galeria-img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   display: block;
   transition: transform 0.6s ease;
   cursor: pointer;
