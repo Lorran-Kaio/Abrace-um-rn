@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -7,17 +7,17 @@
     <link rel="icon" type="image/x-icon" href="assets/Logo.png" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=roboto:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/icon?family=material+icons"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sgoja3dmi69iuzq2pvdrzhwq+dy64/butbmjw1mz8t5hzapchrrkuc4w0kg879m7"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
     <link href="css/reset.css" rel="stylesheet" />
@@ -31,28 +31,39 @@
       defer
     ></script>
     <script defer src="js/custom-elements.js"></script>
+    <script defer src="js/lojinha.js"></script>
   </head>
   <body>
     <app-header></app-header>
 
-    <main class="container-main">
+    <main class="container-main h-100">
       <div class="content-center">
         <div class="introducao">
-          <h1>
+          <h1 class="text-center h1 mb-3">Lojinha</h1>
+          <p
+            class="text-center lead mb-5"
+            style="max-width: 650px; margin: 0 auto"
+          >
             Todo o dinheiro arrecadado será destinado a ajudar mães e bebês em
             vulnerabilidade
-          </h1>
+          </p>
         </div>
+
         <div class="search-container">
-          <i class="fas fa-search" id="search-icon"></i>
+          <i class="material-icons" id="search-icon">search</i>
           <input
             type="text"
             id="search"
             placeholder="Buscar produtos..."
             style="display: none"
           />
-          <!-- Inicialmente escondido -->
         </div>
+
+        <!-- Produtos -->
+        <section class="product-section">
+          <!-- Os produtos serão carregados dinamicamente via JavaScript -->
+        </section>
+
         <div class="floating-icons">
           <a
             href="https://abrir.link/bOXtq"
@@ -71,21 +82,6 @@
             <img src="./assets/instagram.svg" alt="Instagram" />
           </a>
         </div>
-        <!-- Produtos -->
-        <a href="https://www.instagram.com/lojinha.abraceumrn/" target="_blank"
-          ><section class="product-section">
-            <div class="product-item" *ngFor="let product of products">
-              <img
-                [src]="product.src"
-                [alt]="product.name"
-                class="product-img"
-              />
-              <div class="product-details">
-                <span class="product-name">{{ product.name }}</span>
-                <span class="product-price"> </span>
-              </div>
-            </div></section
-        ></a>
       </div>
     </main>
 
