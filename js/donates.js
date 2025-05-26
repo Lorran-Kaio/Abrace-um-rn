@@ -2,6 +2,10 @@ function mostrarSection(tipo) {
   const section = document.getElementById('section-content');
   let html = '';
 
+  if(tipo !== undefined) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+
   if (tipo === 'money' || tipo === undefined) {
     html = `
       <div class="mt-5 bg-white rounded-4 p-3">

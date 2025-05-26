@@ -23,7 +23,7 @@ class AppHeader extends HTMLElement {
               <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="/voluntarie-se.html">Voluntarie-se</a>
             </li>
             <li>
-              <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre">Sobre</a>
+              <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre.html">Sobre</a>
             </li>
           </ul>
 
