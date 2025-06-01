@@ -1,12 +1,11 @@
-// Dados dos produtos da lojinha
 const produtos = [
   {
     id: 1,
-    nome: "Necessaire Rosa",
+    nome: "Necessaire transparente",
     preco: 35.00,
     imagem: "assets/bolsinha.jpeg",
     categoria: "acessorios",
-    descricao: "Necessaire linda e prática para organizar seus itens pessoais"
+    descricao: "Necessaire linda e prática para organizar seus itens pessoais."
   },
   {
     id: 2,
@@ -14,200 +13,80 @@ const produtos = [
     preco: 28.00,
     imagem: "assets/estojo-autocuidado.jpeg",
     categoria: "acessorios",
-    descricao: "Estojo especial para seus produtos de autocuidado"
-  },
-  {
-    id: 3,
-    nome: "Copo Personalizado",
-    preco: 22.00,
-    imagem: "assets/img-copo.jpeg",
-    categoria: "casa",
-    descricao: "Copo personalizado para chá de bebê e ocasiões especiais"
-  },
-  {
-    id: 4,
-    nome: "Kit Carrinhos",
-    preco: 45.00,
-    imagem: "assets/img-kit-carrinhos.jpg",
-    categoria: "brinquedos",
-    descricao: "Kit com carrinhos coloridos para diversão dos pequenos"
+    descricao: "Estojo especial para seus produtos de autocuidado. Ideal para fazer kits de higiene, maquiagem, manicure e muito mais!"
   },
   {
     id: 5,
-    nome: "Body Personalizado",
+    nome: "Copo Térmico Personalizado",
     preco: 30.00,
     imagem: "assets/produto1.jpg",
-    categoria: "roupas",
-    descricao: "Body personalizado com estampas fofas para bebês"
+    categoria: "acessorios",
+    descricao: "Copo térmico personalizado com nome, ideal para manter sua bebida na temperatura certa!"
   },
   {
     id: 6,
-    nome: "Manta de Bebê",
+    nome: "Canetas Personalizadas",
     preco: 55.00,
     imagem: "assets/produto2.jpg",
-    categoria: "roupas",
-    descricao: "Manta macia e quentinha para o conforto do seu bebê"
+    categoria: "acessorios",
+    descricao: "Canetas personalizadas com o tema de sua preferência, perfeitas para lembrancinhas ou uso diário."
   },
   {
     id: 7,
-    nome: "Kit Babadores",
+    nome: "Necessaire Maletinha",
     preco: 40.00,
     imagem: "assets/produto3.jpg",
     categoria: "acessorios",
-    descricao: "Kit com 3 babadores temáticos super fofinhos"
+    descricao: "Necessaire em formato de maletinha com transparência frontal e personalizada. Ideal para organizar seus itens de forma prática e estilosa. É só escolher o tema e nós fazemos para você!",
   },
   {
     id: 8,
-    nome: "Sapatinho de Crochê",
+    nome: "Camisa Sublimada",
     preco: 32.00,
     imagem: "assets/produto4.jpg",
     categoria: "roupas",
-    descricao: "Sapatinho artesanal de crochê feito com muito amor"
-  },
-  {
-    id: 9,
-    nome: "Touca Decorada",
-    preco: 25.00,
-    imagem: "assets/produto5.jpg",
-    categoria: "acessorios",
-    descricao: "Touca linda com decoração especial para recém-nascidos"
+    descricao: "Camisa sublimada personalizada com o tema de sua escolha. Confortável e estilosa, perfeita para qualquer ocasião."
   },
   {
     id: 10,
-    nome: "Almofada Amamentação",
+    nome: "Marca páginas Personalizados",
     preco: 65.00,
     imagem: "assets/produto6.jpg",
-    categoria: "maternidade",
-    descricao: "Almofada ergonômica para tornar a amamentação mais confortável"
+    categoria: "papelaria",
+    descricao: "Marca páginas personalizados com o tema de sua escolha. Ótimos para presentear ou usar no dia a dia."
   },
   {
     id: 11,
-    nome: "Móbile Musical",
+    nome: "Necessaire transparente",
     preco: 85.00,
-    imagem: "assets/produto7.jpg",
-    categoria: "decoracao",
-    descricao: "Móbile musical com melodias suaves para o berço do bebê"
+    imagem: "assets/produto9.jpg",
+    categoria: "acessorios",
+    descricao: "Necessaire linda e prática para organizar seus itens pessoais. Com design elegante e funcional, ideal para uso diário ou viagens."
   },
   {
     id: 12,
-    nome: "Kit Higiene Decorado",
+    nome: "Canecas Personalizadas",
     preco: 75.00,
     imagem: "assets/produto8.jpg",
-    categoria: "higiene",
-    descricao: "Kit completo de higiene com potes decorados personalizados"
-  },
-  {
-    id: 13,
-    nome: "Organizador de Fraldas",
-    preco: 42.00,
-    imagem: "assets/produto9.jpg",
-    categoria: "organizacao",
-    descricao: "Organizador prático e bonito para manter as fraldas sempre em ordem"
-  },
-  {
-    id: 14,
-    nome: "Quadro Decorativo",
-    preco: 38.00,
-    imagem: "assets/produto10.jpg",
-    categoria: "decoracao",
-    descricao: "Quadro personalizado para decorar o quartinho do bebê"
-  },
-  {
-    id: 15,
-    nome: "Chupeta Personalizada",
-    preco: 18.00,
-    imagem: "assets/produto11.jpg",
     categoria: "acessorios",
-    descricao: "Chupeta com nome personalizado e cores suaves"
+    descricao: "Canecas personalizadas com o tema de sua escolha. Perfeitas para presentear ou para uso pessoal, trazendo um toque especial ao seu café ou chá."
   },
   {
     id: 16,
-    nome: "Livro Sensorial",
+    nome: "Organizador de Gavetas",
     preco: 45.00,
     imagem: "assets/produto12.jpg",
-    categoria: "brinquedos",
-    descricao: "Livro de tecido com texturas para estimular os sentidos do bebê"
-  },
-  {
-    id: 17,
-    nome: "Naninha Personalizada",
-    preco: 35.00,
-    imagem: "assets/produto13.jpg",
-    categoria: "brinquedos",
-    descricao: "Naninha macia e personalizada para ser a companheira do bebê"
-  },
-  {
-    id: 18,
-    nome: "Kit Paninhos de Boca",
-    preco: 28.00,
-    imagem: "assets/produto14.jpg",
-    categoria: "higiene",
-    descricao: "Kit com 5 paninhos de boca super absorventes e decorados"
-  },
-  {
-    id: 19,
-    nome: "Porta Documentos",
-    preco: 32.00,
-    imagem: "assets/produto15.jpg",
     categoria: "organizacao",
-    descricao: "Porta documentos temático para organizar papéis importantes do bebê"
-  },
-  {
-    id: 20,
-    nome: "Enfeite de Porta",
-    preco: 48.00,
-    imagem: "assets/produto16.jpg",
-    categoria: "decoracao",
-    descricao: "Enfeite personalizado para a porta da maternidade ou do quarto"
-  },
-  {
-    id: 21,
-    nome: "Lembrancinha Maternidade",
-    preco: 15.00,
-    imagem: "assets/produto17.jpg",
-    categoria: "lembrancinhas",
-    descricao: "Linda lembrancinha personalizada para distribuir na maternidade"
+    descricao: "Organizador de gavetas para roupas de bebê ou peças íntimas com 3 variações de formato e tamanho, personalizado para a sua necessidade. Ajuda a manter tudo no lugar e facilita na hora de escolher as roupinhas do dia."
   },
   {
     id: 22,
-    nome: "Convite Chá de Bebê",
+    nome: "Kit de Necessaires Impermeáveis",
     preco: 8.00,
     imagem: "assets/produto18.jpg",
-    categoria: "papelaria",
-    descricao: "Convite personalizado para seu chá de bebê (unidade)"
-  },
-  {
-    id: 23,
-    nome: "Caderno da Gestante",
-    preco: 55.00,
-    imagem: "assets/produto19.jpg",
-    categoria: "papelaria",
-    descricao: "Caderno especial para registrar todos os momentos da gestação"
-  },
-  {
-    id: 24,
-    nome: "Bolsa Maternidade",
-    preco: 120.00,
-    imagem: "assets/produto20.jpg",
     categoria: "acessorios",
-    descricao: "Bolsa prática e estilosa com vários compartimentos para a mamãe"
+    descricao: "Kit com 2 necessaires impermeáveis, espaçosas e perfeitas para organizar itens de higiene, maquiagem ou acessórios. Práticas e fáceis de limpar, ideais para viagens ou uso diário."
   },
-  {
-    id: 25,
-    nome: "Kit Primeiro Banho",
-    preco: 68.00,
-    imagem: "assets/produto21.jpg",
-    categoria: "higiene",
-    descricao: "Kit completo para o primeiro banho do bebê com produtos especiais"
-  },
-  {
-    id: 26,
-    nome: "Chaveiro Personalizado",
-    preco: 12.00,
-    imagem: "assets/produto22.jpg",
-    categoria: "acessorios",
-    descricao: "Chaveiro fofo personalizado com o nome do bebê"
-  }
 ];
 
 let produtosFiltrados = [...produtos];

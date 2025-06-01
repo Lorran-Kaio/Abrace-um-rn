@@ -1,6 +1,9 @@
-/* Estilo geral da lojinha */
 .container-main {
-  padding: 2rem 1rem;
+  padding: 3rem 0;
+}
+
+.content-center {
+  height: 100%;
 }
 
 .introducao {
@@ -73,6 +76,8 @@
 
 /* Cards de produto estilo e-commerce */
 .product-card {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -146,6 +151,9 @@
 }
 
 .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
 }
 
@@ -195,6 +203,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: auto;
   gap: 8px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -360,6 +369,7 @@
 /* Mensagem quando não há produtos */
 .no-products {
   grid-column: 1 / -1;
+  min-height: 100vh;
   text-align: center;
   padding: 4rem 2rem;
   color: #666;
@@ -455,7 +465,7 @@
   }
   
   .container-main {
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 0;
   }
   
   .introducao {
