@@ -11,27 +11,27 @@ class AppHeader extends HTMLElement {
         <div class="desktop-nav">
           <ul class="desktop-nav-links">
             <li>
-              <a class="${currentPage === "/" ? "active" : ""}" href="/">Início</a>
+              <a class="${currentPage === "/" ? "active" : ""}" href="index.html">Início</a>
             </li>
             <li>
-              <a class="${currentPage === "/galeria.html" ? "active" : ""}" href="/galeria.html">Galeria</a>
+              <a class="${currentPage === "/galeria.html" ? "active" : ""}" href="galeria.html">Galeria</a>
             </li>
             <li>
-              <a class="${currentPage === "/lojinha.html" ? "active" : ""}" href="/lojinha.html">Lojinha</a>
+              <a class="${currentPage === "/lojinha.html" ? "active" : ""}" href="lojinha.html">Lojinha</a>
             </li>
             <li>
-              <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="/voluntarie-se.html">Voluntarie-se</a>
+              <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="voluntarie-se.html">Voluntarie-se</a>
             </li>
             <li>
-              <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre.html">Sobre</a>
+              <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="sobre.html">Sobre</a>
             </li>
           </ul>
 
           <div class="desktop-nav-buttons">
-            <a class="botao pequeno-rosa" href="/receber.html">
+            <a class="botao pequeno-rosa" href="receber.html">
               Receber
             </a>
-            <a class="botao pequeno-azul" href="/doar-inicial.html">
+            <a class="botao pequeno-azul" href="doar-inicial.html">
               Doar
             </a>
           </div>
@@ -56,27 +56,27 @@ class AppHeader extends HTMLElement {
           <div class="offcanvas-body sidebar">
             <ul class="nav-links sidebar-nav-links">
               <li>
-                <a class="${currentPage === "/" ? "active" : ""}" href="/">Início</a>
+                <a class="${currentPage === "/" ? "active" : ""}" href="index.html">Início</a>
               </li>
               <li>
-                <a class="${currentPage === "/galeria.html" ? "active" : ""}" href="/galeria.html">Galeria</a>
+                <a class="${currentPage === "/galeria.html" ? "active" : ""}" href="galeria.html">Galeria</a>
               </li>
               <li>
-                <a class="${currentPage === "/lojinha.html" ? "active" : ""}" href="/lojinha.html">Lojinha</a>
+                <a class="${currentPage === "/lojinha.html" ? "active" : ""}" href="lojinha.html">Lojinha</a>
               </li>
               <li>
-                <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="/voluntarie-se.html">Voluntarie-se</a>
+                <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="voluntarie-se.html">Voluntarie-se</a>
               </li>
               <li>
-                <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="/sobre.html">Sobre</a>
+                <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="sobre.html">Sobre</a>
               </li>
             </ul>
 
             <div class="sidebar-buttons">
-              <a class="botao pequeno-rosa" href="/receber.html">
+              <a class="botao pequeno-rosa" href="receber.html">
                 Receber
               </a>
-              <a class="botao pequeno-azul" href="/doar-inicial.html">
+              <a class="botao pequeno-azul" href="doar-inicial.html">
                 Doar
               </a>
             </div>

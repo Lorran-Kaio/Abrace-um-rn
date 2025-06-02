@@ -1,9 +1,9 @@
 function mostrarSection(tipo) {
-  const section = document.getElementById('section-content');
-  let html = '';
+  const section = document.getElementById('section-content')
+  let html = ''
 
-  if(tipo !== undefined) {
-    section.scrollIntoView({ behavior: 'smooth' });
+  if (tipo !== undefined) {
+    section.scrollIntoView({ behavior: 'smooth' })
   }
 
   if (tipo === 'money' || tipo === undefined) {
@@ -18,18 +18,9 @@ function mostrarSection(tipo) {
             <h2 class="mt-2 px-3 fw-semibold">Banco: Banco do Brasil</h2>
             <button id="btnChavePix" class="mt-3 btn-donate">Copiar chave PIX</button>
           </div>
-          <script>
-            function copyPix() {
-                navigator.clipboard.writeText('26219166434')
-            }
-            const btn = document.getElementById('btnChavePix')
-            btn.addEventListener('click', () => {
-              copyPix()         
-            })      
-          </script>
         </div>
       </div>
-    `;
+    `
   } else if (tipo === 'used') {
     html = `
       <div class="map-section mt-5 bg-white rounded-4 p-3">
@@ -48,7 +39,8 @@ function mostrarSection(tipo) {
         </div>
 
         
-        ${ /* Quando a Unifacisa for um ponto de coleta, descomentar esse trecho. 
+        ${
+          /* Quando a Unifacisa for um ponto de coleta, descomentar esse trecho. 
         <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15831.668590248479!2d-35.8833422!3d-7.2502702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1dd56c7b510f%3A0x7f9090ed2cec933c!2sUNIFACISA%20-%20Centro%20Universit%C3%A1rio!5e0!3m2!1spt-BR!2sbr!4v1746539215198!5m2!1spt-BR!2sbr"
@@ -60,9 +52,10 @@ function mostrarSection(tipo) {
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div> */
-        ''}
+          ''
+        }
       </div>
-    `;
+    `
   } else if (tipo === 'store') {
     html = `
       <style>
@@ -89,12 +82,28 @@ function mostrarSection(tipo) {
           casa produtos lindos? Na nossa lojinha, todo o dinheiro arrecadado
           é destinado a ajudar mães e bebês em situação de vulnerabilidade.
         </p>
-        <a href="https://www.instagram.com/lojinha.abraceumrn/" target="_blank" class="mt-4 btn-lojinha">Acesse a Lojinha Agora</a>
+        <a href="lojinha.html" class="mt-4 btn-lojinha">Acesse a Lojinha Agora</a>
       </div>
-    `;
+    `
   }
 
-  section.innerHTML = html;
+  section.innerHTML = html
 }
 
-mostrarSection();
+mostrarSection()
+
+function copyPix() {
+  navigator.clipboard.writeText('26219166434')
+}
+
+const btn = document.getElementById('btnChavePix')
+btn.addEventListener('click', (e) => {
+  copyPix()
+  e.target.textContent = 'Chave PIX copiada!'
+  e.target.disabled = true
+
+  setTimeout(() => {
+    e.target.textContent = 'Copiar chave PIX'
+    e.target.disabled = false
+  }, 2000)
+})
