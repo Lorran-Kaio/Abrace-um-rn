@@ -12,27 +12,29 @@ class AppHeader extends HTMLElement {
           <ul class="desktop-nav-links">
             <li>
               <a class="${
-                currentPage === '/' ? 'active' : ''
+                currentPage === '/' || currentPage.includes('index.html')
+                  ? 'active'
+                  : ''
               }" href="index.html">Início</a>
             </li>
             <li>
               <a class="${
-                currentPage === '/galeria.html' ? 'active' : ''
+                currentPage.includes('galeria.html') ? 'active' : ''
               }" href="galeria.html">Galeria</a>
             </li>
             <li>
               <a class="${
-                currentPage === '/lojinha.html' ? 'active' : ''
+                currentPage.includes('lojinha.html') ? 'active' : ''
               }" href="lojinha.html">Lojinha</a>
             </li>
             <li>
               <a class="${
-                currentPage === '/voluntarie-se.html' ? 'active' : ''
+                currentPage.includes('voluntarie-se.html') ? 'active' : ''
               }" href="voluntarie-se.html">Voluntarie-se</a>
             </li>
             <li>
               <a class="${
-                currentPage === '/sobre.html' ? 'active' : ''
+                currentPage.includes('sobre.html') ? 'active' : ''
               }" href="sobre.html">Sobre</a>
             </li>
           </ul>
@@ -67,27 +69,29 @@ class AppHeader extends HTMLElement {
             <ul class="nav-links sidebar-nav-links">
               <li>
                 <a class="${
-                  currentPage === '/' ? 'active' : ''
+                  currentPage === '/' || currentPage.includes('index.html')
+                    ? 'active'
+                    : ''
                 }" href="index.html">Início</a>
               </li>
               <li>
                 <a class="${
-                  currentPage === '/galeria.html' ? 'active' : ''
+                  currentPage.includes('galeria.html') ? 'active' : ''
                 }" href="galeria.html">Galeria</a>
               </li>
               <li>
                 <a class="${
-                  currentPage === '/lojinha.html' ? 'active' : ''
+                  currentPage.includes('lojinha.html') ? 'active' : ''
                 }" href="lojinha.html">Lojinha</a>
               </li>
               <li>
                 <a class="${
-                  currentPage === '/voluntarie-se.html' ? 'active' : ''
+                  currentPage.includes('voluntarie-se.html') ? 'active' : ''
                 }" href="voluntarie-se.html">Voluntarie-se</a>
               </li>
               <li>
                 <a class="${
-                  currentPage === '/sobre.html' ? 'active' : ''
+                  currentPage.includes('sobre.html') ? 'active' : ''
                 }" href="sobre.html">Sobre</a>
               </li>
             </ul>
