@@ -1,3 +1,14 @@
+function copyPixOnClick(e) {
+  navigator.clipboard.writeText('26219166434')
+  e.target.textContent = 'Chave PIX copiada!'
+  e.target.disabled = true
+
+  setTimeout(() => {
+    e.target.textContent = 'Copiar chave PIX'
+    e.target.disabled = false
+  }, 2000)
+}
+
 function mostrarSection(tipo) {
   const section = document.getElementById('section-content')
   let html = ''
@@ -16,7 +27,7 @@ function mostrarSection(tipo) {
             <h2 class="mt-2 px-3 fw-semibold">Chave PIX: 262.191.664-34</h2>
             <h2 class="mt-2 px-3 fw-semibold">Nome: Maria Cavalcanti Freire</h2>
             <h2 class="mt-2 px-3 fw-semibold">Banco: Banco do Brasil</h2>
-            <button id="btnChavePix" class="mt-3 btn-donate">Copiar chave PIX</button>
+            <button onclick="copyPixOnClick(event)" class="mt-3 btn-donate">Copiar chave PIX</button>
           </div>
         </div>
       </div>
@@ -91,19 +102,3 @@ function mostrarSection(tipo) {
 }
 
 mostrarSection()
-
-function copyPix() {
-  navigator.clipboard.writeText('26219166434')
-}
-
-const btn = document.getElementById('btnChavePix')
-btn.addEventListener('click', (e) => {
-  copyPix()
-  e.target.textContent = 'Chave PIX copiada!'
-  e.target.disabled = true
-
-  setTimeout(() => {
-    e.target.textContent = 'Copiar chave PIX'
-    e.target.disabled = false
-  }, 2000)
-})
