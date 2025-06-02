@@ -1,7 +1,7 @@
 // Informações de contato
 const contatoInfo = {
-  whatsapp: "(83) 99999-9999",
-  whatsappLink: "https://wa.me/5583999999999",
+  whatsapp: "(83) 98707-5415",
+  whatsappLink: "https://wa.me/55839987075415",
   instagram: "@abraceumrn",
   instagramLink: "https://instagram.com/abraceumrn"
 };
@@ -10,7 +10,7 @@ const contatoInfo = {
 function initGaleria() {
   const masonryItems = document.querySelectorAll('.masonry-item');
   
-  masonryItems.forEach((item, index) => {
+  masonryItems.forEach((item) => {
     const img = item.querySelector('.galeria-img');
     
     // Adicionar classe 'loaded' quando a imagem carregar para remover o shimmer

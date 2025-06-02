@@ -225,7 +225,7 @@ function entrarEmContatoWhatsApp(produtoId) {
   if (!produto) return;
   
   const mensagem = `Olá! Tenho interesse no produto: ${produto.nome} - R$ ${produto.preco.toFixed(2).replace('.', ',')}`;
-  const whatsappUrl = `https://abrir.link/bOXtq?text=${encodeURIComponent(mensagem)}`;
+  const whatsappUrl = `https://wa.me/55839987075415?text=${encodeURIComponent(mensagem)}`;
   window.open(whatsappUrl, '_blank');
 }
 
