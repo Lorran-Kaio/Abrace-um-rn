@@ -4,26 +4,36 @@ class AppHeader extends HTMLElement {
     this.innerHTML = `
     <header class="app-header">
       <div class="container app-header-content">
-        <a href="/" class="logo">
+        <a href="index.html" class="logo">
           <img src="assets/Logo.png" width="80" height="60" />
         </a>
 
         <div class="desktop-nav">
           <ul class="desktop-nav-links">
             <li>
-              <a class="${currentPage === "/" ? "active" : ""}" href="index.html">Início</a>
+              <a class="${
+                currentPage === '/' ? 'active' : ''
+              }" href="index.html">Início</a>
             </li>
             <li>
-              <a class="${currentPage === "/galeria.html" ? "active" : ""}" href="galeria.html">Galeria</a>
+              <a class="${
+                currentPage === '/galeria.html' ? 'active' : ''
+              }" href="galeria.html">Galeria</a>
             </li>
             <li>
-              <a class="${currentPage === "/lojinha.html" ? "active" : ""}" href="lojinha.html">Lojinha</a>
+              <a class="${
+                currentPage === '/lojinha.html' ? 'active' : ''
+              }" href="lojinha.html">Lojinha</a>
             </li>
             <li>
-              <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="voluntarie-se.html">Voluntarie-se</a>
+              <a class="${
+                currentPage === '/voluntarie-se.html' ? 'active' : ''
+              }" href="voluntarie-se.html">Voluntarie-se</a>
             </li>
             <li>
-              <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="sobre.html">Sobre</a>
+              <a class="${
+                currentPage === '/sobre.html' ? 'active' : ''
+              }" href="sobre.html">Sobre</a>
             </li>
           </ul>
 
@@ -47,7 +57,7 @@ class AppHeader extends HTMLElement {
 
         <div class="offcanvas sidebar-container offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
               <img src="assets/Logo.png" width="80" height="60" />
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
@@ -56,19 +66,29 @@ class AppHeader extends HTMLElement {
           <div class="offcanvas-body sidebar">
             <ul class="nav-links sidebar-nav-links">
               <li>
-                <a class="${currentPage === "/" ? "active" : ""}" href="index.html">Início</a>
+                <a class="${
+                  currentPage === '/' ? 'active' : ''
+                }" href="index.html">Início</a>
               </li>
               <li>
-                <a class="${currentPage === "/galeria.html" ? "active" : ""}" href="galeria.html">Galeria</a>
+                <a class="${
+                  currentPage === '/galeria.html' ? 'active' : ''
+                }" href="galeria.html">Galeria</a>
               </li>
               <li>
-                <a class="${currentPage === "/lojinha.html" ? "active" : ""}" href="lojinha.html">Lojinha</a>
+                <a class="${
+                  currentPage === '/lojinha.html' ? 'active' : ''
+                }" href="lojinha.html">Lojinha</a>
               </li>
               <li>
-                <a class="${currentPage === "/voluntarie-se.html" ? "active" : ""}" href="voluntarie-se.html">Voluntarie-se</a>
+                <a class="${
+                  currentPage === '/voluntarie-se.html' ? 'active' : ''
+                }" href="voluntarie-se.html">Voluntarie-se</a>
               </li>
               <li>
-                <a class="${currentPage === "/sobre.html" ? "active" : ""}" href="sobre.html">Sobre</a>
+                <a class="${
+                  currentPage === '/sobre.html' ? 'active' : ''
+                }" href="sobre.html">Sobre</a>
               </li>
             </ul>
 
@@ -113,5 +133,5 @@ class AppFooter extends HTMLElement {
   }
 }
 
-window.customElements.define('app-header', AppHeader);
-window.customElements.define('app-footer', AppFooter);
+window.customElements.define('app-header', AppHeader)
+window.customElements.define('app-footer', AppFooter)
