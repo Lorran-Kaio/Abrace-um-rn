@@ -134,11 +134,6 @@ function renderizarProdutos(produtosParaRenderizar = produtosFiltrados) {
       <div class="product-info">
         <h3 class="product-name">${produto.nome}</h3>
         <p class="product-description">${produto.descricao}</p>
-        <div class="product-price-container">
-          <span class="product-price">R$ ${produto.preco
-            .toFixed(2)
-            .replace('.', ',')}</span>
-        </div>
         <button class="btn-contact" onclick="entrarEmContato(${produto.id})">
           <i class="material-icons">message</i>
           Entrar em Contato
@@ -200,9 +195,6 @@ function abrirDetalheProduto(produtoId) {
           <div class="modal-info">
             <h2>${produto.nome}</h2>
             <p class="modal-description">${produto.descricao}</p>
-            <div class="modal-price">R$ ${produto.preco
-              .toFixed(2)
-              .replace('.', ',')}</div>
             <div class="modal-actions">
               <button class="btn-contact-modal" onclick="entrarEmContato(${
                 produto.id
@@ -249,9 +241,7 @@ function entrarEmContatoWhatsApp(produtoId) {
   const produto = produtos.find((p) => p.id === produtoId)
   if (!produto) return
 
-  const mensagem = `Olá! Tenho interesse no produto: ${
-    produto.nome
-  } - R$ ${produto.preco.toFixed(2).replace('.', ',')}`
+  const mensagem = `Olá! Tenho interesse no produto: ${produto.nome} da Lojinha Abrace um RN. Gostaria de mais informações.`
   const whatsappUrl = `https://wa.me/5583987075415?text=${encodeURIComponent(
     mensagem
   )}`
