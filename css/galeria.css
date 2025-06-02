@@ -280,10 +280,11 @@
   line-height: 1.6;
   text-align: justify;
   font-family: 'Montserrat', sans-serif;
+  white-space: pre-wrap;
 }
 
 .tipo-ajuda-badge {
-  display: block;
+  display: inline-block;
   width: max-content;
   background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-medio) 100%);
   color: white;
@@ -293,6 +294,31 @@
   font-size: 0.9rem;
   box-shadow: 0 4px 15px rgba(75, 185, 186, 0.3);
   font-family: 'Montserrat', sans-serif;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Contêiner para múltiplas badges */
+.tipo-ajuda-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Cores específicas para cada tipo de kit */
+.tipo-ajuda-badge.kit-higiene {
+  background: linear-gradient(135deg, #d16b7a 0%, var(--rosa-escuro) 100%);
+  box-shadow: 0 4px 15px rgba(246, 133, 151, 0.4);
+}
+
+.tipo-ajuda-badge.kit-completo {
+  background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-medio) 100%);
+  box-shadow: 0 4px 15px rgba(75, 185, 186, 0.3);
+}
+
+.tipo-ajuda-badge.kit-roupinhas {
+  background: linear-gradient(135deg, #9b7db8 0%, #c8a8d8 100%);
+  box-shadow: 0 4px 15px rgba(155, 125, 184, 0.4);
 }
 
 .contato-links {

@@ -89,7 +89,28 @@ function openModal(masonryItem) {
   modalImage.alt = dados.alt;
   modalNome.textContent = dados.nome;
   modalDescricao.textContent = dados.descricao;
-  modalTipoAjuda.textContent = dados.tipoAjuda;
+  
+  // Processar múltiplos tipos de ajuda separados por vírgula
+  const tiposAjuda = dados.tipoAjuda ? dados.tipoAjuda.split(',').map(tipo => tipo.trim()) : [];
+  
+  // Limpar conteúdo anterior e criar badges para cada tipo
+  modalTipoAjuda.innerHTML = '';
+  tiposAjuda.forEach(tipo => {
+    const badge = document.createElement('span');
+    badge.textContent = tipo;
+    badge.className = 'tipo-ajuda-badge';
+    
+    // Adicionar classe específica baseada no tipo para cores diferentes
+    if (tipo.toLowerCase().includes('completo')) {
+      badge.classList.add('kit-completo');
+    } else if (tipo.toLowerCase().includes('roupinhas')) {
+      badge.classList.add('kit-roupinhas');
+    } else if (tipo.toLowerCase().includes('higiene')) {
+      badge.classList.add('kit-higiene');
+    }
+    
+    modalTipoAjuda.appendChild(badge);
+  });
   
   // Configurar links de contato
   modalWhatsapp.href = contatoInfo.whatsappLink;
