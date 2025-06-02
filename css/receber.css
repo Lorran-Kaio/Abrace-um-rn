@@ -11,20 +11,13 @@
   }
 }
 
-
 header {
   background-color: #feebee;
 }
 
-body {
-  background-color: #8deced;
-  color: #333333;
-  line-height: 1.6;
-}
-
 .container-main {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 3rem auto;
   padding: 20px;
   background-color: #feebee;
   border-radius: 12px;

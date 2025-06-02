@@ -64,6 +64,9 @@ formVoluntario.addEventListener('submit', async function (e) {
     return
   }
 
+  btnEnviar.disabled = true
+  btnEnviar.textContent = 'Enviando...'
+
   const isCpfDuplicate = await cpfDuplicado(data.cpf)
   if (isCpfDuplicate) {
     errorToastEl.querySelector('.toast-body').textContent =
@@ -72,14 +75,22 @@ formVoluntario.addEventListener('submit', async function (e) {
     return
   }
 
-  // Rota de teste, trocar pela de cima apos o teste
+  // Rota de teste: https://httpbin.org/post
+  // Trocar pela rota real após o teste
+  // "https://sheetdb.io/api/v1/db1c2w33lso24"
   try {
-    btnEnviar.disabled = true
-    btnEnviar.textContent = 'Enviando...'
-    const response = await fetch('https://httpbin.org/post', {
+    await fetch('https://sheetdb.io/api/v1/db1c2w33lso24', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        nome: data.name,
+        cpf: data.cpf,
+        telefone: data.phone,
+        email: data.email,
+        mensagem: data.message,
+        cidade: data.city,
+        ajuda: data['help-type'],
+      }),
     })
 
     toast.show()
@@ -126,7 +137,9 @@ function limparCPF(cpf) {
 
 async function cpfDuplicado(cpf) {
   const cpfLimpo = limparCPF(cpf)
-  const response = await fetch('https://sheetdb.io/api/v1/db1c2w33lso24')
+  const response = await fetch(
+    `https://sheetdb.io/api/v1/db1c2w33lso24/search?cpf=${cpfLimpo}`
+  )
   const data = await response.json()
-  return data.some((item) => limparCPF(item.cpf) === cpfLimpo)
+  return data.length > 0
 }

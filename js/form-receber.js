@@ -6,9 +6,11 @@ function limparCPF(cpf) {
 }
 
 async function cpfDuplicado(cpf) {
-  const cpfLimpo = limparCPF(cpf);
-  const response = await fetch(`https://sheetdb.io/api/v1/j7z1tsiircwdc/search?cpf=${cpfLimpo}`);
-  const data = await response.json();
+  const cpfLimpo = limparCPF(cpf)
+  const response = await fetch(
+    `https://sheetdb.io/api/v1/j7z1tsiircwdc/search?cpf=${cpfLimpo}`
+  )
+  const data = await response.json()
   return data.length > 0
 }
 
@@ -41,8 +43,8 @@ document
         sendBtn.textContent = 'Enviar'
         return
       }
-      // const response = await fetch("https://sheetdb.io/api/v1/j7z1tsiircwdc", {
-      const response = await fetch('https://httpbin.org/post', {
+      const response = await fetch('https://sheetdb.io/api/v1/j7z1tsiircwdc', {
+        // const response = await fetch('https://httpbin.org/post', {
         // Rota de teste, trocar pela de cima apos o teste
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
