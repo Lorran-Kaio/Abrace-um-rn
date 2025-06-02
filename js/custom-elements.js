@@ -122,7 +122,7 @@ class AppFooter extends HTMLElement {
               <a target="_blank" href="https://www.instagram.com/abraceumrn/">
                 <img src="./assets/instagram.svg" alt="Instagram" />
               </a>
-              <a target="_blank" href="https://wa.me/55839987075415">
+              <a target="_blank" href="https://wa.me/5583987075415">
                 <img src="./assets/wpp.svg" alt="WhatsApp" />
               </a>
             </div>

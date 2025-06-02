@@ -1,7 +1,7 @@
 // Informações de contato
 const contatoInfo = {
   whatsapp: "(83) 98707-5415",
-  whatsappLink: "https://wa.me/55839987075415",
+  whatsappLink: "https://wa.me/5583987075415",
   instagram: "@abraceumrn",
   instagramLink: "https://instagram.com/abraceumrn"
 };
