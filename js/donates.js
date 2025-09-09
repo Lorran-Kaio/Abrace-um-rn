@@ -38,13 +38,13 @@ function mostrarSection(tipo) {
         <h2 class="h3 mb-4 fw-semibold">Nosso ponto de coleta:</h2>
 
         <div class="mb-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.0817433626507!2d-35.895171!3d-7.231516999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1e3fd944fb89%3A0xcda786a5ecaa446e!2sR.%20do%20Progresso%2C%20228%20-%20Quarenta%2C%20Campina%20Grande%20-%20PB%2C%2058416-180!5e0!3m2!1spt-BR!2sbr!4v1746539154116!5m2!1spt-BR!2sbr"
-            width="100%"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.0656829416166!2d-35.905250223923396!3d-7.23334897104028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1e170824dd0d%3A0x6ddbf69d2214cb03!2sR.%20do%20Sol%2C%20853%20-%20Santa%20Rosa%2C%20Campina%20Grande%20-%20PB%2C%2058416-280!5e0!3m2!1spt-BR!2sbr!4v1757420622839!5m2!1spt-BR!2sbr" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
